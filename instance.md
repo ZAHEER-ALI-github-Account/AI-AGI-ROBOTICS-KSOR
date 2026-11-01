@@ -1,8 +1,8 @@
 ---
 format: 2
 name: ksor-ai-robotics
-title: KSoR
-description: What a Knowledge System of Record is, how a project climbs the governance ladder, and which surfaces publish the same governed knowledge.
+title: "AI, AGI & Robotics"
+description: A cited knowledge base on artificial intelligence, robotics and artificial general intelligence — how they connect, the technologies behind them, who is building them, and where they may lead.
 toolchain:
   requires: ">=0.0.61"
   scaffolded: "0.0.61"
@@ -28,38 +28,16 @@ database:
 # version: 0.1.0
 ---
 
-This record is authoritative for what a Knowledge System of Record is, how a
-project climbs the governance ladder, and which surfaces the same governed
-knowledge is published through. It does not cover the CLI's release history or
-the internals of the retrieval kernel.
+This record covers artificial intelligence (AI), robotics and artificial
+general intelligence (AGI): their foundations and history, how AI and robots
+connect through the sense–think–act loop, the core technologies, the main
+types of robots and where they are used, the ethical risks and regulation, the
+labs and governments working on AGI, and expert views of the future. Every
+claim is cited to a public source listed on the document that makes it.
 
-Write and govern the knowledge once; every surface here derives from it. When a
-slide deck, a wiki page or a model's memory disagrees with this record, this
-record wins.
-
-## This is a starter, and it is yours to replace
-
-Everything above describes KSoR itself. It ships filled in so that a fresh
-project has a real governed corpus on the first `pnpm dev` — five approved
-documents, three of them inside a folder, and one carrying a summary
-companion — instead of an empty shelf and a placeholder.
-The documents live in `knowledge/`; delete them as your own knowledge arrives.
-
-Be deliberate about replacing it, because a starter that describes the wrong
-thing describes it _everywhere_. Three things here are read by every surface:
-
-- **`title:`** is the display title — the human name every page leads with and
-  the heading of the record's root index. The machine identity stays
-  `ksor-ai-robotics` in `name:`, and that is what citations and `llms.txt` use.
-- **`description:`** is one sentence that seeds `llms.txt` and the MCP
-  discovery document.
-- **This body** is the MCP server's instructions, handed in full to every
-  connecting agent; its first paragraph is this record's scope, which the site
-  publishes. A record published with it unchanged will tell an agent — quite
-  accurately, and quite uselessly for you — that it is authoritative for what
-  a Knowledge System of Record is.
-
-Ask your coding agent to run the **intake interview** (it knows how — see
-`.agents/skills/intake-interview/`), answer its questions, and let it write
-this document with you. Replace those three and every surface follows,
-because every surface reads them from here.
+It does not give investment, legal, medical or safety-engineering advice, and
+it does not forecast on its own account: predictions here are reported as the
+named source's prediction, never as the record's. Where sources disagree, the
+record states each view with its own citation rather than choosing between
+them. When a question falls outside these documents, say so rather than
+answering from general knowledge.
