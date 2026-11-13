@@ -1,23 +1,22 @@
 import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
 
-import { SignIn } from "@/components/sign-in";
-import { appTitle } from "./shared";
-
+/**
+ * What the Fumadocs layouts share. The record's identity, sign-in and search
+ * live in the site navbar (components/site-navbar.tsx), which stands above
+ * every route — so the shell's own nav title is the way into the record's
+ * CONTENTS rather than a second copy of the record's name, and the theme
+ * switch is gone because the design system is dark-only (app/layout.tsx).
+ */
 export function baseOptions(): BaseLayoutProps {
   return {
     nav: {
-      // The record's display title (instance.md's H1), not the machine slug.
-      // Truncated: a long title forced horizontal scroll on mobile without it
-      // (found live, 2026-08-18).
+      url: "/docs",
       title: (
-        <span className="max-w-[60vw] truncate font-display text-[0.9375rem] font-semibold tracking-[-0.005em] sm:max-w-none">
-          {appTitle}
+        <span className="font-mono text-[11px] font-medium tracking-[0.2em] text-fd-muted-foreground uppercase">
+          Contents
         </span>
       ),
     },
-    // `secondary` puts it at the navbar's trailing edge, beside the theme
-    // toggle. SignIn renders null when no issuer is configured, so a record
-    // that does not offer sign-in shows nothing rather than an empty slot.
-    links: [{ type: "custom", secondary: true, children: <SignIn /> }],
+    themeSwitch: { enabled: false },
   };
 }

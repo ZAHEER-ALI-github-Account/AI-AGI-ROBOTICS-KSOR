@@ -87,49 +87,54 @@
   --ksor-cover-panel-rule: oklch(0.9 0.014 258);
 }
 
+/* ── Neural: the design system (build.md, "Design system") ──────────────────
+   The site is dark-only: app/layout.tsx forces the `dark` class, so THIS block
+   is the palette every page is drawn in, and the light `:root` values above
+   are inert. Near-black ground, cyan for action, violet as the second voice,
+   gold reserved for AGI. `--primary` is still the one brand colour links,
+   buttons and the focus ring spend; the other two live in `--neural-*`. */
 .dark {
-  --background: oklch(0.155 0.012 255);
-  --foreground: oklch(0.965 0.004 255);
-  --card: oklch(0.195 0.012 255);
-  --card-foreground: oklch(0.965 0.004 255);
-  --popover: oklch(0.195 0.012 255);
-  --popover-foreground: oklch(0.965 0.004 255);
-  --primary: #7fb0f9;
-  --primary-foreground: #081226;
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.24 0.012 255);
-  --muted-foreground: oklch(0.7 0.014 255);
-  --accent: oklch(0.26 0.014 255);
-  --accent-foreground: oklch(0.965 0.004 255);
+  --background: #05060a;
+  --foreground: #e6eaf2;
+  --card: #0a0d16;
+  --card-foreground: #e6eaf2;
+  --popover: #0b0e18;
+  --popover-foreground: #e6eaf2;
+  --primary: #00e5ff;
+  --primary-foreground: #00131a;
+  --secondary: #121726;
+  --secondary-foreground: #e6eaf2;
+  --muted: #0e1220;
+  --muted-foreground: #8e97ab;
+  --accent: #111a2b;
+  --accent-foreground: #f2f5fa;
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 12%);
-  --input: oklch(1 0 0 / 16%);
-  --ring: #7fb0f9;
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.185 0.012 255);
-  --sidebar-foreground: oklch(0.965 0.004 255);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.26 0.014 255);
-  --sidebar-accent-foreground: oklch(0.965 0.004 255);
-  --sidebar-border: oklch(1 0 0 / 12%);
-  --sidebar-ring: #7fb0f9;
+  --border: rgb(140 170 255 / 12%);
+  --input: rgb(140 170 255 / 18%);
+  --ring: #00e5ff;
+  --chart-1: #00e5ff;
+  --chart-2: #8b5cf6;
+  --chart-3: #ffc857;
+  --chart-4: #38bdf8;
+  --chart-5: #c084fc;
+  --sidebar: #070912;
+  --sidebar-foreground: #e6eaf2;
+  --sidebar-primary: #00e5ff;
+  --sidebar-primary-foreground: #00131a;
+  --sidebar-accent: #111a2b;
+  --sidebar-accent-foreground: #f2f5fa;
+  --sidebar-border: rgb(140 170 255 / 12%);
+  --sidebar-ring: #00e5ff;
 
-  /* In the dark the cover rises one step ABOVE the page (0.245 against the
-     background's 0.155) rather than inverting: a cover is the surface that
-     catches the light. Same object, same lighting, darker room. */
-  --ksor-cover: oklch(0.245 0.038 258);
-  --ksor-cover-foreground: oklch(0.97 0.006 258);
-  --ksor-cover-muted: oklch(0.72 0.022 258);
-  --ksor-cover-rule: oklch(0.34 0.03 258);
-  --ksor-cover-hover: oklch(0.3 0.035 258);
-  --ksor-cover-panel: oklch(0.285 0.036 258);
-  --ksor-cover-panel-rule: oklch(0.36 0.03 258);
+  /* The cover is now transparent: the ground's ambient glow shows through it,
+     and its panels are glass rather than stock. */
+  --ksor-cover: transparent;
+  --ksor-cover-foreground: #eef1f7;
+  --ksor-cover-muted: #9aa3b8;
+  --ksor-cover-rule: rgb(140 170 255 / 14%);
+  --ksor-cover-hover: rgb(0 229 255 / 6%);
+  --ksor-cover-panel: rgb(14 18 32 / 80%);
+  --ksor-cover-panel-rule: rgb(0 229 255 / 22%);
 }
 
 /* The token → utility mapping shadcn components compile against, as
@@ -150,8 +155,20 @@
    browser smoke test asserts zero external requests. Georgia and its siblings
    are on every machine this site is read on, and a serif that arrives instantly
    beats a distinctive one that arrives late. */
+/* Neural typography (build.md): Space Grotesk for headings, Inter for body.
+   Both are SELF-HOSTED from the @fontsource-variable packages imported in
+   app/layout.tsx — bundled into the build as local woff2 files, so the build
+   still works offline and a page makes no request to a font CDN. The system
+   stacks stay behind them as the fallback. */
 @theme {
-  --font-display: ui-serif, Georgia, "Times New Roman", Times, serif;
+  --font-sans:
+    "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display:
+    "Space Grotesk Variable", "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --color-neural-cyan: #00e5ff;
+  --color-neural-violet: #8b5cf6;
+  --color-neural-gold: #ffc857;
+  --color-neural-void: #05060a;
 }
 
 @theme inline {
@@ -1046,4 +1063,176 @@ html > body[data-scroll-locked] {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-fd-primary);
+}
+
+/* ═══ Neural design system — base layout ═════════════════════════════════════
+   build.md's design system, applied site-wide. Everything below is additive:
+   the shell's own rules above stay in force, and this layer only restyles the
+   surfaces they paint.
+
+   The site navbar (components/site-navbar.tsx) is a 3.5rem bar above every
+   route. Fumadocs' docs layout already reserves a banner row through
+   `--fd-banner-height` — the sidebar, the table of contents and the mobile
+   sub-navigation all offset by it — so declaring it here is what keeps them
+   sitting BELOW the navbar instead of under it. */
+:root {
+  --fd-banner-height: 3.5rem;
+  --neural-glass: rgb(255 255 255 / 3.5%);
+  --neural-glass-strong: rgb(12 16 28 / 72%);
+  --neural-glass-border: rgb(0 229 255 / 16%);
+  --neural-glass-border-hover: rgb(0 229 255 / 42%);
+  --neural-glow: 0 18px 48px -18px rgb(0 229 255 / 28%);
+  --neural-glow-violet: 0 18px 48px -18px rgb(139 92 246 / 32%);
+}
+
+html {
+  background-color: #05060a;
+  color-scheme: dark;
+}
+
+/* The ground: near-black with two slow ambient lights — cyan from the upper
+   left, violet from the upper right — and a faint technical grid that fades
+   out towards the bottom. Fixed, so the light stays put while the page moves
+   over it. */
+body {
+  background-color: #05060a;
+  background-image:
+    radial-gradient(ellipse 70% 45% at 8% -8%, rgb(0 229 255 / 10%), transparent 62%),
+    radial-gradient(ellipse 55% 45% at 96% 4%, rgb(139 92 246 / 13%), transparent 62%),
+    radial-gradient(ellipse 60% 40% at 50% 110%, rgb(139 92 246 / 7%), transparent 70%);
+  background-attachment: fixed;
+  font-feature-settings: "cv11", "ss01";
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, rgb(140 170 255 / 4.5%) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(140 170 255 / 4.5%) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 30%, transparent 85%);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.015em;
+}
+
+::selection {
+  background: rgb(0 229 255 / 28%);
+  color: #ffffff;
+}
+
+/* ── Glassmorphism ────────────────────────────────────────────────────────────
+   One recipe, used everywhere a panel floats: a faint translucent fill, a
+   backdrop blur, a hairline neon border and a soft cyan glow. `glass-hover`
+   adds the interactive state; `glass-strong` is the denser variant for bars
+   and menus that sit over moving content and must stay legible. */
+@utility glass {
+  background-image: linear-gradient(160deg, rgb(255 255 255 / 6%), rgb(255 255 255 / 1.5%));
+  background-color: var(--neural-glass);
+  border: 1px solid var(--neural-glass-border);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 6%),
+    var(--neural-glow);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+}
+
+@utility glass-strong {
+  background-color: var(--neural-glass-strong);
+  border-color: var(--neural-glass-border);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+}
+
+@utility glass-hover {
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease,
+    transform 200ms ease,
+    background-color 200ms ease;
+  &:hover,
+  &:focus-visible {
+    border-color: var(--neural-glass-border-hover);
+    background-color: rgb(0 229 255 / 4%);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 8%),
+      0 0 0 1px rgb(0 229 255 / 10%),
+      0 22px 56px -20px rgb(0 229 255 / 45%);
+  }
+}
+
+@utility text-neural {
+  background-image: linear-gradient(100deg, #00e5ff 0%, #8b5cf6 70%, #c4b5fd 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@utility neural-hairline {
+  background-image: linear-gradient(
+    90deg,
+    transparent,
+    rgb(0 229 255 / 55%) 30%,
+    rgb(139 92 246 / 55%) 70%,
+    transparent
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glass-hover {
+    transition: none;
+  }
+}
+
+/* ── The shell, in glass ──────────────────────────────────────────────────────
+   Fumadocs paints its sidebar, menus and dialogs with solid tokens; here they
+   become translucent so the ambient light reads through them. */
+#nd-sidebar {
+  background-color: rgb(7 9 18 / 62%);
+  border-color: var(--neural-glass-border);
+  backdrop-filter: blur(18px) saturate(150%);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
+}
+
+#nd-subnav {
+  background-color: rgb(5 6 10 / 72%);
+  border-color: var(--neural-glass-border);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+[data-radix-popper-content-wrapper] > [role="menu"],
+[role="dialog"][data-state="open"]:not([data-vaul-drawer]) {
+  border-color: var(--neural-glass-border);
+  box-shadow:
+    0 24px 64px -24px rgb(0 0 0 / 80%),
+    var(--neural-glow);
+}
+
+/* The record's own cards — Fumadocs' Card inside a document, and the TOC
+   popover on narrow screens — take the glass recipe too. */
+#nd-page .prose a[data-card],
+#nd-page [data-card] {
+  background-image: linear-gradient(160deg, rgb(255 255 255 / 5%), rgb(255 255 255 / 1.5%));
+  border-color: var(--neural-glass-border);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+#nd-page .prose a:not([data-card]) {
+  text-decoration-color: rgb(0 229 255 / 40%);
+}
+
+#nd-page .prose a:not([data-card]):hover {
+  text-decoration-color: #00e5ff;
 }

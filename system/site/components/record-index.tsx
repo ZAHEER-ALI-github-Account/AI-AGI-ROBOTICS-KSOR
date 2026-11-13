@@ -58,7 +58,7 @@ export function RecordIndex({
             <li key={entry.url}>
               <Link
                 href={entry.url}
-                className="group flex items-start gap-4 rounded-lg border border-fd-border bg-fd-muted/40 px-5 py-4 transition-all hover:-translate-y-px hover:border-fd-primary/40 hover:bg-fd-muted hover:shadow-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fd-ring motion-reduce:transition-none motion-reduce:hover:translate-y-0"
+                className="glass glass-hover group flex items-start gap-4 rounded-xl px-5 py-4 hover:-translate-y-px focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fd-ring motion-reduce:transition-none motion-reduce:hover:translate-y-0"
               >
                 <Icon
                   aria-hidden

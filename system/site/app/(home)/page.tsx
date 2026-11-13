@@ -1,7 +1,6 @@
 import type { ReactElement } from "react";
 
 import mark from "@/app/icon.png";
-import { FooterMark } from "@/components/footer-mark";
 import { HomeCover } from "@/components/home-cover";
 import { appName, appPurpose, appTitle } from "@/lib/shared";
 import { entriesUnder, entryFor, getSortedPages } from "@/lib/source";
@@ -65,13 +64,8 @@ export default function HomePage(): ReactElement {
         firstUrl={first.url}
         lead={lead}
         behind={behind}
-        // Signed from inside the cover, so the front door is one screen rather
-        // than a band with a strip of page beneath it.
-        foot={
-          <p className="mx-auto w-full max-w-6xl px-6 font-mono text-xs tracking-wider text-[var(--ksor-cover-muted)] uppercase">
-            <FooterMark />
-          </p>
-        }
+        // No `foot`: the site footer (app/layout.tsx) carries the build's mark
+        // on every route, the front door included.
       />
     </main>
   );

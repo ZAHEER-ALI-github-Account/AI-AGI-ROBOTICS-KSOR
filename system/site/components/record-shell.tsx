@@ -1,8 +1,5 @@
 import type { ReactElement, ReactNode } from "react";
 import { DocsLayout } from "fumadocs-ui/layouts/docs";
-import { ThemeSwitch } from "fumadocs-ui/layouts/shared/slots/theme-switch";
-
-import { FooterMark } from "@/components/footer-mark";
 import { baseOptions } from "@/lib/layout.shared";
 import { appName } from "@/lib/shared";
 import { basePath, getSortedPageTree, getSortedPages } from "@/lib/source";
@@ -26,12 +23,8 @@ export function RecordShell({ children }: { children: ReactNode }): ReactElement
     <DocsLayout
       tree={getSortedPageTree()}
       {...baseOptions()}
-      // The switch ships inside a bordered bar of its own in the sidebar
-      // footer — a flex column whose children stretch, so one 61px control sat
-      // in a 236px box that was 74% empty and read as a broken input field
-      // (measured in Chromium, 2026-08-21). That bar carries `empty:hidden`,
-      // so turning the built-in switch off removes it entirely; the control
-      // moves into the footer below, on the same row as the mark.
+      // Dark-only site: no theme switch (baseOptions also turns it off; said
+      // again here so the sidebar's own bordered switch bar stays hidden).
       themeSwitch={{ enabled: false }}
       // After the spread: a future sidebar key in baseOptions must not
       // silently swallow the attribution (review finding, 2026-08-18).
@@ -43,12 +36,14 @@ export function RecordShell({ children }: { children: ReactNode }): ReactElement
         // unique key prop" naming RecordShell, on every page. Invisible in a
         // production build, which is why it survived: it only shows in the
         // dev server, where the adopter meets it first.
+        // The build's mark (and any audience notice) is in the site footer on
+        // every route, and the theme switch is gone with the light theme
+        // (app/layout.tsx), so this keeps only the record's identity.
         footer: (
           <div key="record-footer" className="mt-3 flex flex-col gap-2">
             {/* The record's own identity, on every page rather than only the
                 home page: the slug is what citations carry and llms.txt is the
-                door an agent is told to read. The sidebar had three links and
-                then several hundred pixels of nothing beneath them. */}
+                door an agent is told to read. */}
             <p className="text-xs text-fd-muted-foreground">
               <span className="font-mono">{appName}</span> · {documents} document
               {documents === 1 ? "" : "s"} ·{" "}
@@ -59,12 +54,6 @@ export function RecordShell({ children }: { children: ReactNode }): ReactElement
                 llms.txt
               </a>
             </p>
-            <div className="flex items-center justify-between gap-3">
-              <p className="text-xs">
-                <FooterMark />
-              </p>
-              <ThemeSwitch />
-            </div>
           </div>
         ),
       }}
