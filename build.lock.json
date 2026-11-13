@@ -7,9 +7,9 @@
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "930ef98696da9cd235b5d56a4cde1ec25eb46180",
-  "dirty": true,
-  "as_of": "2026-11-01T06:27:48.264Z",
+  "source_commit": "a2190360ef860fb9ea6408628bc0b47011ee0875",
+  "dirty": false,
+  "as_of": "2026-11-13T10:46:35.422Z",
   "drafts": "hidden",
   "instance_sha256": "b540af19d2bdbb11bfdc97c1c16328e0e5d47549c7a00b676d8f478af294ff97",
   "policy_sha256": "0c9042309f6105b59304ffe21b36078ea2e60d09ba59c46b462bd5910025361b",
