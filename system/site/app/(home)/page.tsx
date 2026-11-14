@@ -1,29 +1,23 @@
 import type { ReactElement } from "react";
 
-import mark from "@/app/icon.png";
-import { HomeCover } from "@/components/home-cover";
+import { NeuralHero } from "@/components/home/neural-hero";
+import { SectionCards, type SectionCard } from "@/components/home/section-cards";
+import { dirOfRoute } from "@/lib/index-routes";
+import { sectionTone } from "@/lib/section-tone";
 import { appName, appPurpose, appTitle } from "@/lib/shared";
-import { entriesUnder, entryFor, getSortedPages } from "@/lib/source";
+import { entriesUnder, getSortedPages } from "@/lib/source";
 
 /**
- * The front door of a system of record.
+ * The front door: the Neural Core hero, then one card per section.
  *
- * It has four jobs and no fifth (research/site-design.md §4): say what the
- * record is authoritative for, name the identity citations carry, open the
- * record, and point at the surfaces agents read — the last from `/llms.txt`
- * and each document's markdown twin, where agents already look, rather than
- * from a list of addresses printed at a reader. Every string comes from
- * `instance.md` or a document's own frontmatter; the site never contains
- * authored content (scaffolded AGENTS.md, critical rule 1).
- *
- * One full screen, standing alone: no sidebar, no document chrome. The design
- * lives in components/home-cover; this file's job is to hand it the record.
+ * Every string comes from `instance.md` or the record itself — the title and
+ * purpose from instance.md, the sections and their documents from the
+ * regenerated indexes — so the site still holds no authored content
+ * (AGENTS.md, critical rule 1). A built site admits only what §2.5 admits, so
+ * a record of drafts builds this page in its empty state.
  */
 export default function HomePage(): ReactElement {
-  // The first document in sidebar order — never a hardcoded path, so deleting
-  // the example the scaffold ships cannot leave a link pointing at nothing, and
-  // a record that grows a root `index.md` opens on that instead with no change
-  // here.
+  // The first document in sidebar order — never a hardcoded path.
   const pages = getSortedPages();
   const [first] = pages;
 
@@ -37,36 +31,29 @@ export default function HomePage(): ReactElement {
     );
   }
 
-  // The record as the cover shows it: the document the button opens, then the
-  // entries standing behind it. The lead is looked up among the top-level
-  // entries so a folder keeps the count of what it holds, and falls back to
-  // building an entry directly — the first document in governed order can sit
-  // BELOW the top level, where the root's own listing would never return it.
-  const entries = entriesUnder("");
-  const lead = entries.find((entry) => entry.url === first.url) ?? entryFor(first);
-  const behind = entries.filter((entry) => entry.url !== lead.url).slice(0, 3);
+  const sections: SectionCard[] = entriesUnder("").map((entry) => {
+    const isFolder = entry.documents > 0;
+    const dir = isFolder ? dirOfRoute(entry.url) : null;
+    return {
+      url: entry.url,
+      title: entry.title,
+      documents: entry.documents,
+      preview: dir === null ? [] : entriesUnder(dir).slice(0, 3).map((child) => child.title),
+      description: entry.description,
+      tone: sectionTone(entry.title, isFolder),
+    };
+  });
 
   return (
     <main className="flex flex-1 flex-col">
-      <HomeCover
-        mark={mark}
-        name={appName}
-        // instance.md's own H1 — a human name, not the machine slug — so a
-        // fresh scaffold reads "Knowledge System of Record" until the intake
-        // interview writes the real one.
+      <NeuralHero
         title={appTitle}
-        // The record's own words: instance.md's first paragraph, which is also
-        // what `ksor serve` gives the MCP server as its instructions. The
-        // framework's marketing line used to sit here, which put ksor's voice
-        // above somebody else's knowledge (research/site-design.md F7).
         purpose={appPurpose}
+        name={appName}
         documents={pages.length}
         firstUrl={first.url}
-        lead={lead}
-        behind={behind}
-        // No `foot`: the site footer (app/layout.tsx) carries the build's mark
-        // on every route, the front door included.
       />
+      <SectionCards sections={sections} />
     </main>
   );
 }
