@@ -125,8 +125,11 @@ function sortTree(
         const url = routeAt(node, depth);
         // The folder's own page — the regenerated index rendered as a listing
         // — so the sidebar row LINKS the folder rather than only toggling it.
-        const index: Node & { type: "page" } = { type: "page", name: node.name, url };
-        return { ...node, index, children: sortTree(node.children, order, depth + 1) };
+        // Named like every other surface names it (folderTitle), so the
+        // sidebar and the breadcrumbs read "AGI" where the tool wrote "Agi".
+        const name = url === "" ? node.name : folderTitle(url);
+        const index: Node & { type: "page" } = { type: "page", name, url };
+        return { ...node, name, index, children: sortTree(node.children, order, depth + 1) };
       }
       if (node.type === "page") {
         const badge = stagePageOf(pagePathByUrl().get(node.url) ?? "")?.badge ?? null;
@@ -256,7 +259,7 @@ export function entriesUnder(dir: string): RecordEntry[] {
       return [
         {
           url: item.url,
-          title: item.title,
+          title: folderTitle(item.path),
           description: null,
           badge: null,
           owner: null,
@@ -269,12 +272,45 @@ export function entriesUnder(dir: string): RecordEntry[] {
   });
 }
 
-/** The heading of a directory's page: the index's own H1, or its humanised name. */
+/**
+ * The acronyms the record's own document titles write in capitals, keyed by
+ * their lowercase form — `agi` → `AGI`, `ai` → `AI`. Read from the titles on
+ * every call rather than cached, so `pnpm dev` follows a retitled document.
+ */
+function recordAcronyms(): Map<string, string> {
+  const out = new Map<string, string>();
+  for (const page of source.getPages()) {
+    for (const token of page.data.title.match(/\b[A-Z][A-Z0-9]+\b/g) ?? []) {
+      out.set(token.toLowerCase(), token);
+    }
+  }
+  return out;
+}
+
+/**
+ * A folder's display name. `ksor build` names a folder by capitalising the
+ * first letter of its path segment (`agi` → "Agi", `ai-and-robotics` → "Ai and
+ * robotics"), and a folder name must be lowercase, so no path can spell an
+ * acronym. The display name therefore takes each word's casing from the
+ * record's own titles where they write it as an acronym ("Embodied AGI and
+ * robotics" → "AGI"), and is otherwise exactly the generated name. Nothing is
+ * typed here: rename the folder or retitle its documents and this follows.
+ * Display only — the generated index.md, llms.txt and the MCP door keep the
+ * tool's own name.
+ */
+export function folderTitle(path: string): string {
+  const acronyms = recordAcronyms();
+  return humanise(path.slice(path.lastIndexOf("/") + 1))
+    .split(" ")
+    .map((word) => acronyms.get(word.toLowerCase()) ?? word)
+    .join(" ");
+}
+
+/** The heading of a directory's page: the record's title at the root, else the folder's display name. */
 export function folderHeading(dir: string): string {
+  if (dir !== "") return folderTitle(dir);
   const entries = readStagedIndex(dir) ?? [];
-  return (
-    entries[0]?.heading || (dir === "" ? appTitle : humanise(dir.slice(dir.lastIndexOf("/") + 1)))
-  );
+  return entries[0]?.heading || appTitle;
 }
 
 /** Every directory the stage holds an index for, as `/docs/...` slugs — the folder routes to export. */
