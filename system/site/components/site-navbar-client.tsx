@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState, type ReactElement } from "react";
-import { ChevronDown, Menu, Search, X } from "lucide-react";
+import { ChevronDown, Menu, Network, Search, X } from "lucide-react";
 import { useSearchContext } from "fumadocs-ui/contexts/search";
 
 import {
@@ -102,6 +102,28 @@ export function NavSections({ sections }: { sections: readonly NavSection[] }): 
   );
 }
 
+/** The knowledge graph, as a navbar link that knows when it is the current page. */
+export function NavGraphLink(): ReactElement {
+  const pathname = usePathname();
+  const active = isActive(pathname, "/graph");
+  return (
+    <Link
+      href="/graph"
+      aria-current={active ? "page" : undefined}
+      className={cn(
+        "group inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-sm font-medium text-fd-muted-foreground transition-colors hover:text-fd-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fd-ring",
+        active && "bg-white/5 text-fd-foreground",
+      )}
+    >
+      <Network
+        aria-hidden
+        className={cn("size-4 transition-colors group-hover:text-neural-gold", active && "text-neural-gold")}
+      />
+      Knowledge graph
+    </Link>
+  );
+}
+
 /**
  * The search bar. It opens the record's own search dialog (Orama over the
  * static index — see app/layout.tsx), which also answers Ctrl/⌘ K anywhere.
@@ -167,6 +189,13 @@ export function MobileMenu({ sections }: { sections: readonly NavSection[] }): R
           id="site-mobile-menu"
           className="glass-strong fixed inset-x-0 top-14 bottom-0 z-40 overflow-y-auto border-t border-[var(--neural-glass-border)] px-4 py-5 motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-top-2"
         >
+          <Link
+            href="/graph"
+            className="glass glass-hover mb-5 flex items-center gap-3 rounded-xl border-[color-mix(in_oklab,#ffc857_35%,transparent)] px-4 py-3"
+          >
+            <Network aria-hidden className="size-4 text-neural-gold" />
+            <span className="font-display font-medium">Knowledge graph</span>
+          </Link>
           <p className="mb-3 px-2 font-mono text-[10px] tracking-[0.2em] text-fd-muted-foreground uppercase">
             Sections
           </p>

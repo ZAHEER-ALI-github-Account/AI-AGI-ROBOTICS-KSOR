@@ -6,7 +6,7 @@ import { useEffect, useRef, useState, type ReactElement } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { ArrowDown, ArrowRight } from "lucide-react";
+import { ArrowDown, ArrowRight, Network } from "lucide-react";
 
 import type { NeuralCoreInput } from "@/components/home/neural-core-scene";
 
@@ -197,11 +197,19 @@ export function NeuralHero({ title, purpose, name, documents, firstUrl }: Neural
                 Open the record
                 <ArrowRight aria-hidden className="size-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
-              <a
-                href="#sections"
+              <Link
+                href="/graph"
                 className="glass glass-hover inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium text-fd-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fd-ring"
               >
-                Explore {documents} documents
+                <Network aria-hidden className="size-4 text-neural-gold" />
+                Knowledge graph
+              </Link>
+              <a
+                href="#sections"
+                className="inline-flex items-center gap-2 rounded-full px-4 py-3 text-sm font-medium text-fd-muted-foreground transition-colors hover:text-fd-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fd-ring"
+              >
+                {documents} documents
+                <ArrowDown aria-hidden className="size-3.5" />
               </a>
             </div>
           </div>

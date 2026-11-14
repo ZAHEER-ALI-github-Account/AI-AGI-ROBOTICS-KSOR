@@ -6,6 +6,7 @@ import mark from "@/app/icon.png";
 import { SignIn } from "@/components/sign-in";
 import {
   MobileMenu,
+  NavGraphLink,
   NavSearch,
   NavSections,
   type NavSection,
@@ -64,8 +65,9 @@ export function SiteNavbar(): ReactElement {
           </span>
         </Link>
 
-        <div className="hidden md:block">
+        <div className="hidden items-center gap-1 md:flex">
           <NavSections sections={sections} />
+          {sections.length === 0 ? null : <NavGraphLink />}
         </div>
 
         <div className="ms-auto flex items-center gap-2">
