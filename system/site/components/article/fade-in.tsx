@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 export function FadeIn({ children, className }: { children: ReactNode; className?: string }): ReactElement {
   return (
     <motion.div
+      data-reveal
       className={className}
       initial={{ opacity: 0, y: 22 }}
       whileInView={{ opacity: 1, y: 0 }}

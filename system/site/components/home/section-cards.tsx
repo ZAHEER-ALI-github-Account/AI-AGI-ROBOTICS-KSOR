@@ -58,6 +58,7 @@ export function SectionCards({ sections }: { sections: readonly SectionCard[] })
     <section id="sections" aria-labelledby="sections-heading" className="relative scroll-mt-20">
       <div className="mx-auto w-full max-w-[97rem] px-4 pt-16 pb-28 md:px-6">
         <motion.div
+          data-reveal
           initial={reduced ? false : { opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.6 }}
@@ -85,6 +86,7 @@ export function SectionCards({ sections }: { sections: readonly SectionCard[] })
         </motion.div>
 
         <motion.ul
+          data-reveal
           variants={grid}
           initial={reduced ? false : "hidden"}
           whileInView="shown"
@@ -94,7 +96,7 @@ export function SectionCards({ sections }: { sections: readonly SectionCard[] })
           {sections.map((section, i) => {
             const color = TONE_COLOR[section.tone];
             return (
-              <motion.li key={section.url} variants={reduced ? undefined : card} className="flex">
+              <motion.li key={section.url} data-reveal variants={reduced ? undefined : card} className="flex">
                 <Link
                   href={section.url}
                   onPointerMove={trackPointer}

@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:aa4e893039606da3f6eae0d59ddc6024d2b12021e284f5a23fa67311f6704492",
+  "build_id": "sha256:7f36bf758563634e25429e9e71b49ee07cafb90148104feef004463c4e0a0c81",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "a2190360ef860fb9ea6408628bc0b47011ee0875",
+  "source_commit": "a5da704cbd3c62daa923519fcba8d77497801b4f",
   "dirty": false,
-  "as_of": "2026-11-13T12:57:15.394Z",
+  "as_of": "2026-11-16T11:56:59.365Z",
   "drafts": "hidden",
   "instance_sha256": "b540af19d2bdbb11bfdc97c1c16328e0e5d47549c7a00b676d8f478af294ff97",
   "policy_sha256": "0c9042309f6105b59304ffe21b36078ea2e60d09ba59c46b462bd5910025361b",
@@ -27,489 +27,597 @@
   "documents": [
     {
       "path": "agi/embodied-agi.md",
-      "sha256": "5a389c1137af1df14818b5be1c4fa86d6540a2ed69b60c5d17518a2a0c400898",
-      "status": "draft",
+      "sha256": "a743549b96f4ca773d5ef9531e93690b218ec64216b16880b86233beaaa111fb",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "agi/governments-and-agi.md",
-      "sha256": "b73accb536c96d2a728961fd9c4ad805a10a1e5cde12de30f94076b0ba0b4507",
-      "status": "draft",
+      "sha256": "1f7dd566e0bf08b6ef8b48f66ab88b08394086e845afe061aea15c366574e017",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "agi/impact.md",
-      "sha256": "e76bc86e1d53cb64d08b6199ff76779d99ba0384f65c15898b9bd37820447fcb",
-      "status": "draft",
+      "sha256": "d7cf17a17b1572626e8b331fc7049e1f0c61371212236efeaee77c8bd34acc6e",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "agi/labs-and-approaches.md",
-      "sha256": "c22ac5ccc865915e3cfb9cd161eaf8f5beb9ff2f91d83bb13e70295130b4e042",
-      "status": "draft",
+      "sha256": "ca06174e1eaa98d4bad701552f2bc7cc9dfbc37abc41b1ebeb61ef7d9e0f0056",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "agi/research-challenges.md",
-      "sha256": "03a45ed8d662afc437462e6b8674493b906c91784b673caaa43624f069ab01fa",
-      "status": "draft",
+      "sha256": "2bb51c9f6597fdddc29a6c8aaee467012ae77d9239509109ddd5af42b54dac30",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "agi/safety-and-alignment.md",
-      "sha256": "7074a6c2578a2c0a8d1ea9c2a4472ecdb1fd45b437c0d02af0b616d8a3cdbf05",
-      "status": "draft",
+      "sha256": "146aedb2fbb2c7ff6bf0db8649327ca3990b8d6067eb82fb5b89213f2b0ca706",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "agi/timelines-and-predictions.md",
-      "sha256": "175fa3f751d31182f75d1dcdc546a0eaf1eb4e2a74dcc51e75c73f5f90b10875",
-      "status": "draft",
+      "sha256": "4e575b768b9d9e2ecd0ba126be2addaaf40a02aee2534883b89c204f69fa2abd",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "agi/viewpoints.md",
-      "sha256": "31c5c21e454438864f3769851244861c0d463d119d74e8ee9267b131b67c1709",
-      "status": "draft",
+      "sha256": "b129cd6346542a0bc3f69a36d6fdb6ff208a8c3d50118280571a8d53b00fcac0",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "agi/what-is-agi.md",
-      "sha256": "4f33bafaf073f1dee219a49723599298f0b30cc063510963a9af987915a5c188",
-      "status": "draft",
+      "sha256": "8157d973392c244272168284979117dec21b479f06902375c44f0c465f8358ad",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "ai-and-robotics/action-and-control.md",
-      "sha256": "50ced33e31754cc599c03bc1fd562c591eb4b2ac330bd8b250763730343b73d7",
-      "status": "draft",
+      "sha256": "4a0737a3688a0b98fba4f8abf0d92e2c2560f0c10fe8756f290f6fb52ae8744b",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "ai-and-robotics/decision-making.md",
-      "sha256": "869629ff2d6beaf21f705a6eab7181548dcc4e5ac308d2ec8b9ad67ccd351a16",
-      "status": "draft",
+      "sha256": "4fd15d3425798cf3bb009f052d5372be8a49ae02da29b4f414b81db582698150",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "ai-and-robotics/perception.md",
-      "sha256": "a51074837fa871c88a5631f067d07b22c6c28d4f26b8e8cab94048a3d62028e1",
-      "status": "draft",
+      "sha256": "6a877b4ebe8c4fae8029fb6e743faba3b01072a25c5d38c010034c9781d11c33",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "ai-and-robotics/sense-think-act.md",
-      "sha256": "b8ea37d42200b6d0c2dbe12bb91e9eb3f7b92b820f1c770db2bdf2c492503bca",
-      "status": "draft",
+      "sha256": "90c00a890357d08266dbfa332342852b2d2b139fe16a958f7a6d50251f96cd9b",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "applications/agriculture.md",
-      "sha256": "78cc761705b10db8fd336e7756134c9c1d673596eeca5b82d912cc0b306f2496",
-      "status": "draft",
+      "sha256": "accf215760c373fc65eedc247fd23d2a86ffa685ba3a5e46779708f88cfe11b6",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "applications/defense.md",
-      "sha256": "de74ec03ae2758efbbd1d6fd49b1e9486d49c34ed270d50d79871e0bf561bbbf",
-      "status": "draft",
+      "sha256": "5f249489892904110cc6d945f978fdb27f077707f4f5e3b898c34464fc8672d6",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "applications/education.md",
-      "sha256": "d5ca8d79be356ac7ecd0048a426d297ca5e54b322e0f8d6cd090b34b344cf4f3",
-      "status": "draft",
+      "sha256": "d70ef71f09f07db1acce911d40e22ee1957683aef7bf732afffaf1b3eb8d9ff2",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "applications/healthcare.md",
-      "sha256": "d4a734a088ede2e6e2f56eb2cf572c77eb66b2acc2c66ebeb2266d4b6696f147",
-      "status": "draft",
+      "sha256": "324bf0dd84501f738adf13dce21fd82e937120052a926d34957972112b9a6984",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "applications/homes.md",
-      "sha256": "38c7fd695300546a2b6d472bc3c0fe3b85ebd5e41f539088c8d2ac08cfe3bc48",
-      "status": "draft",
+      "sha256": "ec9aa0e1de2146a4e6e2314acfd539ed53a9dbe4931b1be08b11c6d2637fa8c1",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "applications/logistics.md",
-      "sha256": "a970e4223a5a5c6e08f4286e2f2e477d392f809a0e0fefacf38358784bf4d139",
-      "status": "draft",
+      "sha256": "a973e08d57f06268871f6710d7a2cf963fc1770ac36c77e3a71fc6a495717519",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "applications/manufacturing.md",
-      "sha256": "6dd9897862cd953c5d2dbd4f1c903efebd1e352f74ead0e2ecf5efa7e5061a00",
-      "status": "draft",
+      "sha256": "1894cd59679e452fb1226c3b62b5307796b3cbc97205e197e8e6909c7c2c0a2b",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "applications/space-exploration.md",
-      "sha256": "5592f686e261ad33d5581ea60b0753b6aeb031b5da2d94b4dcfbb99032862d7e",
-      "status": "draft",
+      "sha256": "8e58b9ade7cb0f646685fe3aa29de42882cb04e4ccd3554f866ab1d2aa4784ce",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "core-technologies/computer-vision.md",
-      "sha256": "1bebf9358015f940d78de1e07384d25f38a527892cff27b7d1fa78cc36113297",
-      "status": "draft",
+      "sha256": "4959bf2c3d31ed070376583e78a0331787286342b449dc580ecd1dde963bc5ea",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "core-technologies/deep-learning.md",
-      "sha256": "ace40576887a68a8a6b2f77d1c308fd26b706a77f10f297886179036f0844ab7",
-      "status": "draft",
+      "sha256": "ac9a55168489bc15525ed30ece6843a2b489f5fc8557f9ecfa6ad506e4d7a5e9",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "core-technologies/llms-in-robots.md",
-      "sha256": "007ba835253f27caf40de202b6d5854c179befc19fe69d8003d1759e238a0c9c",
-      "status": "draft",
+      "sha256": "e78753a951ff075874206b0801031a1de8598d19c95d37a2128411d9a778cf41",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "core-technologies/machine-learning.md",
-      "sha256": "80c067d6f16592b414fb23fe386f6d734bc63412a33aeb3438649f776f47a1dd",
-      "status": "draft",
+      "sha256": "30f4043ca239062a5187008aca335c123f54fbe38ed4a7e7a7c3c2ec65d5c671",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "core-technologies/natural-language-processing.md",
-      "sha256": "67546e90fad6f704779afbc45559057d0b75c825dc1c8db316afad6fdfc8957d",
-      "status": "draft",
+      "sha256": "38983570fa9b5f1f27f843be34dcd8da5cbd053c1d28df58f60556a4738534ae",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "core-technologies/reinforcement-learning.md",
-      "sha256": "db5758284a2cf760f007ffdba3827639f839a6e5354cab6bdb3b2d9371b0f432",
-      "status": "draft",
+      "sha256": "09dba476df8275a1372045de518b4ddd36ea847c897a50141a5e4876d8ae977c",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "core-technologies/ros.md",
-      "sha256": "ecbf2b2d659985ae5b9c78f66fa5ae8b5d64d552e6d6bb01ea5b5308f7c09c47",
-      "status": "draft",
+      "sha256": "b37db095198158a116a7d61ca6ce8b7e130f0a1b867132939e6224163a6d832e",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "core-technologies/simulation-and-digital-twins.md",
-      "sha256": "a3e0422d76b0c2f6eef46967760cae8a7b32debcbdb199ad92ef4be452e960e7",
-      "status": "draft",
+      "sha256": "e210ccb95c74793eeaa13dcda849841c5e2103a08a5146cb928da11e1c4ab4eb",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "core-technologies/slam.md",
-      "sha256": "ee20ce1d90a8a98f516a70e4210366923ab885895c1342ade45f72e948d971a4",
-      "status": "draft",
+      "sha256": "7a49b98f22bd9ed61a083742e85295a3d2268569c00727a2e096c6c97e0d69c6",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "ethics-and-risks/autonomous-weapons.md",
-      "sha256": "4d3b80bac5e473bc5241b4226fd60472212c80f06e4016526f8deaf2e5c050fc",
-      "status": "draft",
+      "sha256": "95854e9f30305825c8a726f1786008bbab50ae9cbeaf31f3340ef3a33be3bad8",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "ethics-and-risks/bias.md",
-      "sha256": "0720efae9befa9d0d0821b8638212b89a8b52f48feb059a9d6dddf2f6c2e36bb",
-      "status": "draft",
+      "sha256": "7f10f9629b66a89f9022e3be62f0da64ce266472f5fed38f7de1274d3f6614d1",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "ethics-and-risks/jobs-and-automation.md",
-      "sha256": "870826d093bd0b8e53cc688bd09d33928e63b84799ed6b533a176a597459bd48",
-      "status": "draft",
+      "sha256": "59a21d818d6edf94db67876410ce6764e0fee2a32b81d22de73d40214cbfe8d4",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "ethics-and-risks/privacy.md",
-      "sha256": "0ef6222cfbe4da6b86d3a1daedf2248af28ee4fc45236ba29b099540b589a477",
-      "status": "draft",
+      "sha256": "7cb854e5ec516f7374c3d16483346e27915a837455248f38ac5235269496a411",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "ethics-and-risks/regulation.md",
-      "sha256": "925d92d56cd7f7763a548cf1416228386152e1c2cd6af78029b84237670b3556",
-      "status": "draft",
+      "sha256": "470739acc440be030ab38d93da9fbf8b7f670f3e3ef2e52683b1cd705619041e",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "ethics-and-risks/safety.md",
-      "sha256": "03faffa345d06a0379093877ce1bf33f4520b910acb6de27936e4c4859d0c6ce",
-      "status": "draft",
+      "sha256": "c2bf4dbe4cd2651701115b87ec5d10d1c3c4d8bd5ca5980e363133bb310787bd",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "foundations/history-of-ai.md",
-      "sha256": "387f1b18c96a01d0e08777382478d39331f1f0d75c96e153f337291dccb8c5fa",
-      "status": "draft",
+      "sha256": "add7fba0a1aa7042798249a163943de36dacde6b9041e7f472cbc67e473915b8",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "foundations/history-of-robotics.md",
-      "sha256": "f622080be1a2323af4ef5cb1829d6280b7d3b5909ba3fdcb1d4a564f7eafe8e7",
-      "status": "draft",
+      "sha256": "8552f7586268730e2392c26f088a8b5d7863b6b0aa425548b782e931cf16986f",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "foundations/key-milestones.md",
-      "sha256": "8bb084dc2497ed5cb43248dcc356443e80ba19165975fc13c0968d83279ce219",
-      "status": "draft",
+      "sha256": "66625f235fd33f4b8248c39f8504c2ba74b378b4c3f455e083b670bd2cbcf1ce",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "foundations/what-is-ai.md",
-      "sha256": "ed76e6f5a9116447bec2176f45f50464441f0b4cc8ef575552cabc2e034c3597",
-      "status": "draft",
+      "sha256": "03af738f4a9fce3ec2f80fc637cfe1e5d13d1c8954be2905ff95cadae1578b26",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "foundations/what-is-robotics.md",
-      "sha256": "25b56c8f20abd7060d614f87f9ee8df988ff8b8308d67d2653659497d01071ac",
-      "status": "draft",
+      "sha256": "11b1955c2dd1aa53916e204821875ab254262f195b81567910d204ed640c688f",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "future/general-purpose-robots.md",
-      "sha256": "f4c02620c048c06a55856f1beb34c3f51797d40364d13a88f955ba5cb2117fda",
-      "status": "draft",
+      "sha256": "085804c5633c3a8a36bd08b2aa28c16ed15a7acc241fc97005ece15058801b07",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "future/human-robot-collaboration.md",
-      "sha256": "b0412dce00624dc482fff30264117c04ac3de38d6be2baf9b864568e705b35fd",
-      "status": "draft",
+      "sha256": "cb1eddec40d66a943985b12966f579c3d2410222dac174e9bbb7a19659e86df7",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "future/humanoid-robots-ahead.md",
-      "sha256": "41014d541c4f0b8ecf0c6045c510a9ef3317cbcf0dd34b1398e96f618b8e6b28",
-      "status": "draft",
+      "sha256": "31e77337bd4fba5c2cff390baeb909e587a034fb426dd76d6fec2045c7faa885",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "future/predictions-to-2050.md",
-      "sha256": "6da08d8320f5b898b3ce887d36afda20343f9eaf33cbecb17fb39ab81eede87c",
-      "status": "draft",
+      "sha256": "1f4bab49690014ec58c3024bb0cbde3c80b0f3c22b882651d6bb07da2a516201",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "glossary.md",
-      "sha256": "5c5457f366245f8625126f27aea0d81edc812abd6544a54f33e73ec3c921083a",
-      "status": "draft",
+      "sha256": "e8309f0f1e81cf7e475803a66e06a7e666724ac490650b2ab6d71bc9f41d0cd8",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "references.md",
-      "sha256": "cfa956cdb369af9d22bb36ff406d4d49549d17c9ef73cca7d85dd8c15374c1f9",
-      "status": "draft",
+      "sha256": "c5c8ebcb68dc531b5d758e1288fcc79296fc9dd422c6b66cfbad76745a048576",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "types-of-robots/autonomous-vehicles.md",
-      "sha256": "30620d8c364f2fd7074e956bd274889678556f8b8b82dda4a9d27ce217b18bc1",
-      "status": "draft",
+      "sha256": "5af150cf02605173e5caf70c1594e97a95fea7a66fb3834a95125b9ce02603b9",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "types-of-robots/drones.md",
-      "sha256": "24f4b22c5146b3265bf52ce84d8731445278b02978cee5de70cb00075abb4aba",
-      "status": "draft",
+      "sha256": "14d9a3069191e8bb1dc639f9bceb44f5f8266766c0bf970bb3efedbfb7688d00",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "types-of-robots/humanoid-robots.md",
-      "sha256": "f051cd7593789fd391a8259a9b9f385ae2c743fcf06d2496a371acacc23f04ba",
-      "status": "draft",
+      "sha256": "35268ad13cc5883d23b9c5cbdc8c37606e4d9db476ec83a30b774c7ec5ca30ab",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "types-of-robots/industrial-robots.md",
-      "sha256": "126b2de48a1485393fa937c4c7a62a56087a93f6e3dbd0e81b7ce656e894537d",
-      "status": "draft",
+      "sha256": "7dfa2e67fc7c9499ac79787b5f1d32c5ceba8bf6e8adbdaf9778f33fe66503e2",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "types-of-robots/medical-and-surgical-robots.md",
-      "sha256": "ab03ecb45d40a31b3dcbdc3178b6f8d9194a169811f08985f26eb3d80a469e83",
-      "status": "draft",
+      "sha256": "c585751e7600c3f42bf10b8a044100976ec60f083d90486e16a67012f20e4ad2",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "types-of-robots/service-and-home-robots.md",
-      "sha256": "6596817079b826fd3864ebf6967ebb4fbed1a73db846bf4ea1f5e12fb9ee57b2",
-      "status": "draft",
+      "sha256": "a5caa6eb1010e49ef4dd648c9a3faca4e9da733919a3561648f7a3c939edbff6",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "types-of-robots/swarm-robots.md",
-      "sha256": "7de2d0031641a2aeb0fd985c6e9bf32be11db9eb434cf2a25f388076e0fc1a42",
-      "status": "draft",
+      "sha256": "8513ce61449a376d3a8f753ccedf1e190ae6a07de000c2aa059e0a9dd9f7c43d",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     }
   ],
   "companions": [],
@@ -555,8 +663,8 @@
   "bundles": [
     {
       "viewer": "public",
-      "sha256": "353f3837b0464da963df9226f04abd5d38b0b1a2c73cdf5eda63b8632072ec2b",
-      "files": 1
+      "sha256": "4c3adfffc2901d4136e9ae067fe23c287a1e18a3d3ca7efea6528ae4291fedcc",
+      "files": 63
     }
   ]
 }

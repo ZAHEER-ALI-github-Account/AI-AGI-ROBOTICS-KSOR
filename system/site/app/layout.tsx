@@ -43,6 +43,16 @@ export default function Layout({ children }: LayoutProps<"/">) {
     // is forced below rather than offered as a switch.
     <html lang="en" className="dark" style={{ colorScheme: "dark" }} suppressHydrationWarning>
       <body className="flex flex-col min-h-screen">
+        {/* Scroll-in animations (Framer Motion) start their elements hidden
+            and reveal them from JavaScript. Without JavaScript nothing would
+            reveal them, so every element marked `data-reveal` is shown as is. */}
+        <noscript>
+          <style
+            dangerouslySetInnerHTML={{
+              __html: "[data-reveal]{opacity:1!important;transform:none!important;filter:none!important}",
+            }}
+          />
+        </noscript>
         {/* Which documents carry a badge, for the search dialog — it
             runs in the browser over a static index that has no field for it.
             Delivered in the document rather than as a dialog prop because

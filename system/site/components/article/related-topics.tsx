@@ -33,6 +33,7 @@ export function RelatedTopics({ topics }: { topics: readonly RelatedTopic[] }): 
         <span aria-hidden className="neural-hairline h-px flex-1 opacity-50" />
       </div>
       <motion.ul
+        data-reveal
         variants={list}
         initial="hidden"
         whileInView="shown"
@@ -40,7 +41,7 @@ export function RelatedTopics({ topics }: { topics: readonly RelatedTopic[] }): 
         className="grid gap-3 sm:grid-cols-2"
       >
         {topics.map((topic) => (
-          <motion.li key={topic.url} variants={item} className="flex">
+          <motion.li key={topic.url} data-reveal variants={item} className="flex">
             <Link
               href={topic.url}
               style={{ "--tone": topic.color } as CSSProperties}
