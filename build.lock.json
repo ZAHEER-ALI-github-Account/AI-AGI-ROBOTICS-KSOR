@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:7f36bf758563634e25429e9e71b49ee07cafb90148104feef004463c4e0a0c81",
+  "build_id": "sha256:aedea1988fc7fb143a9fd165f36adb31415064cf644874080e33284a73314e35",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "a5da704cbd3c62daa923519fcba8d77497801b4f",
+  "source_commit": "ba4acce19268aa8e91968026b4866c0de0d3225d",
   "dirty": false,
-  "as_of": "2026-11-16T11:56:59.365Z",
+  "as_of": "2026-11-16T12:19:15.302Z",
   "drafts": "hidden",
   "instance_sha256": "b540af19d2bdbb11bfdc97c1c16328e0e5d47549c7a00b676d8f478af294ff97",
   "policy_sha256": "0c9042309f6105b59304ffe21b36078ea2e60d09ba59c46b462bd5910025361b",
@@ -137,7 +137,7 @@
     },
     {
       "path": "ai-and-robotics/decision-making.md",
-      "sha256": "4fd15d3425798cf3bb009f052d5372be8a49ae02da29b4f414b81db582698150",
+      "sha256": "c43e076f18b61b28748cee3716728874b45d45815851e545e88dce82a36a89a9",
       "status": "stable",
       "audience": [
         "public"
@@ -159,7 +159,7 @@
     },
     {
       "path": "ai-and-robotics/sense-think-act.md",
-      "sha256": "90c00a890357d08266dbfa332342852b2d2b139fe16a958f7a6d50251f96cd9b",
+      "sha256": "4ab345fd5de2d91c2351a93f201863ae26f87eedce5f7d97a85b653362ba18cf",
       "status": "stable",
       "audience": [
         "public"
@@ -291,7 +291,7 @@
     },
     {
       "path": "core-technologies/machine-learning.md",
-      "sha256": "30f4043ca239062a5187008aca335c123f54fbe38ed4a7e7a7c3c2ec65d5c671",
+      "sha256": "846d98dd4a3e179203513cfca8ac7a91fc8d912f9ba07b64f649f85294eb9256",
       "status": "stable",
       "audience": [
         "public"
@@ -456,7 +456,7 @@
     },
     {
       "path": "foundations/what-is-ai.md",
-      "sha256": "03af738f4a9fce3ec2f80fc637cfe1e5d13d1c8954be2905ff95cadae1578b26",
+      "sha256": "712fcdcc2bace315dbfbe6478d50936a1cc3bf299f9efa95dfef7b01a5014227",
       "status": "stable",
       "audience": [
         "public"
@@ -522,7 +522,7 @@
     },
     {
       "path": "glossary.md",
-      "sha256": "e8309f0f1e81cf7e475803a66e06a7e666724ac490650b2ab6d71bc9f41d0cd8",
+      "sha256": "3f793ef51476118a17e7edbde8ab80f958cb5162da8ff7e85eec2d52689697a2",
       "status": "stable",
       "audience": [
         "public"
@@ -533,7 +533,7 @@
     },
     {
       "path": "references.md",
-      "sha256": "c5c8ebcb68dc531b5d758e1288fcc79296fc9dd422c6b66cfbad76745a048576",
+      "sha256": "9e0d446b25e53f261f35734211153536b912ccb7105d43290dbf4b0706bd8763",
       "status": "stable",
       "audience": [
         "public"
@@ -663,7 +663,7 @@
   "bundles": [
     {
       "viewer": "public",
-      "sha256": "4c3adfffc2901d4136e9ae067fe23c287a1e18a3d3ca7efea6528ae4291fedcc",
+      "sha256": "55aa6d54b0e26344f94e6f3688743776aa5100cdff03dea5940e2b11c5c3cf2d",
       "files": 63
     }
   ]
