@@ -7,14 +7,15 @@ order: 301
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
 verified:
   - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
+  - { by: "human:zaheerali", at: 2026-11-16T12:15:55Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
-  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
+  approval: { by: "human:zaheerali", at: 2026-11-16T12:15:55Z }
 sources:
   - id: aima
     title: "Russell & Norvig — Artificial Intelligence: A Modern Approach, 4th edition"
-    resource: https://aima.cs.berkeley.edu/
+    resource: http://aima.cs.berkeley.edu/
   - id: goodfellow
     title: "Goodfellow, Bengio & Courville — Deep Learning (MIT Press, 2016)"
     resource: https://www.deeplearningbook.org/

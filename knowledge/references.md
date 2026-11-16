@@ -4,13 +4,14 @@ title: References
 description: The master list of every source cited in this knowledge base, grouped by section.
 status: stable
 order: 1000
-generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+generated: { by: "claude-code/opus-5-5", at: 2026-11-16T12:15:55Z }
 verified:
   - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
+  - { by: "human:zaheerali", at: 2026-11-16T12:15:55Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
-  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
+  approval: { by: "human:zaheerali", at: 2026-11-16T12:15:55Z }
 ---
 
 **In short:** every source cited anywhere in this record, grouped by the section
@@ -52,7 +53,7 @@ DOI, which was confirmed in the Crossref registry.
 - [Regulation (EU) 2024/1689 — the Artificial Intelligence Act](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)
 - [Rosenblatt — The perceptron: a probabilistic model for information storage and organization in the brain, Psychological Review (1958)](https://doi.org/10.1037/h0042519)
 - [Rumelhart, Hinton & Williams — Learning representations by back-propagating errors, Nature 323 (1986)](https://www.nature.com/articles/323533a0)
-- [Russell & Norvig — Artificial Intelligence: A Modern Approach, 4th edition](https://aima.cs.berkeley.edu/)
+- [Russell & Norvig — Artificial Intelligence: A Modern Approach, 4th edition](http://aima.cs.berkeley.edu/)
 - [Siciliano & Khatib (eds.) — Springer Handbook of Robotics, 2nd edition](https://link.springer.com/referencework/10.1007/978-3-319-32552-1)
 - [Silver et al. — Mastering the game of Go with deep neural networks and tree search, Nature 529 (2016)](https://www.nature.com/articles/nature16961)
 - [Stanford HAI — The 2025 AI Index Report](https://hai.stanford.edu/ai-index/2025-ai-index-report)
@@ -75,7 +76,7 @@ DOI, which was confirmed in the Crossref registry.
 - [NVIDIA — GR00T N1: An Open Foundation Model for Generalist Humanoid Robots (2025)](https://arxiv.org/abs/2503.14734)
 - [Radford et al. — Learning Transferable Visual Models From Natural Language Supervision (2021)](https://arxiv.org/abs/2103.00020)
 - [Redmon et al. — You Only Look Once: Unified, Real-Time Object Detection (2015)](https://arxiv.org/abs/1506.02640)
-- [Russell & Norvig — Artificial Intelligence: A Modern Approach, 4th edition](https://aima.cs.berkeley.edu/)
+- [Russell & Norvig — Artificial Intelligence: A Modern Approach, 4th edition](http://aima.cs.berkeley.edu/)
 - [Siciliano & Khatib (eds.) — Springer Handbook of Robotics, 2nd edition](https://link.springer.com/referencework/10.1007/978-3-319-32552-1)
 - [Sutton & Barto — Reinforcement Learning: An Introduction, 2nd edition](http://incompleteideas.net/book/the-book-2nd.html)
 - [Thrun et al. — Stanley: The Robot that Won the DARPA Grand Challenge (2006)](http://robots.stanford.edu/papers/thrun.stanley05.pdf)
@@ -127,7 +128,7 @@ DOI, which was confirmed in the Crossref registry.
 - [Redmon et al. — You Only Look Once: Unified, Real-Time Object Detection (2015)](https://arxiv.org/abs/1506.02640)
 - [ROS — Robot Operating System (official site)](https://www.ros.org/)
 - [Rumelhart, Hinton & Williams — Learning representations by back-propagating errors, Nature 323 (1986)](https://www.nature.com/articles/323533a0)
-- [Russell & Norvig — Artificial Intelligence: A Modern Approach, 4th edition](https://aima.cs.berkeley.edu/)
+- [Russell & Norvig — Artificial Intelligence: A Modern Approach, 4th edition](http://aima.cs.berkeley.edu/)
 - [Silver et al. — Mastering the game of Go without human knowledge, Nature 550 (2017)](https://www.nature.com/articles/nature24270)
 - [Sutton & Barto — Reinforcement Learning: An Introduction, 2nd edition](http://incompleteideas.net/book/the-book-2nd.html)
 - [Tobin et al. — Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World (2017)](https://arxiv.org/abs/1703.06907)
@@ -360,7 +361,7 @@ DOI, which was confirmed in the Crossref registry.
 - [OECD.AI — Updates to the OECD's definition of an AI system explained (2023)](https://oecd.ai/en/wonk/ai-system-definition-update)
 - [OpenAI — OpenAI Charter](https://openai.com/charter/)
 - [Ouyang et al. — Training language models to follow instructions with human feedback (2022)](https://arxiv.org/abs/2203.02155)
-- [Russell & Norvig — Artificial Intelligence: A Modern Approach, 4th edition](https://aima.cs.berkeley.edu/)
+- [Russell & Norvig — Artificial Intelligence: A Modern Approach, 4th edition](http://aima.cs.berkeley.edu/)
 - [SAE Automotive Engineering — J3016 Automated-Driving Graphic Update (2019)](https://www.mobilityengineeringtech.com/component/content/article/43953)
 - [Sutton & Barto — Reinforcement Learning: An Introduction, 2nd edition](http://incompleteideas.net/book/the-book-2nd.html)
 - [The Bletchley Declaration (2023)](https://www.gov.uk/government/publications/ai-safety-summit-2023-the-bletchley-declaration/the-bletchley-declaration-by-countries-attending-the-ai-safety-summit-1-2-november-2023)
