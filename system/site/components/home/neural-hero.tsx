@@ -9,6 +9,8 @@ import { useGSAP } from "@gsap/react";
 import { ArrowDown, ArrowRight, Network } from "lucide-react";
 
 import type { NeuralCoreInput } from "@/components/home/neural-core-scene";
+import { SceneBoundary } from "@/components/polish/scene-boundary";
+import { hasWebGL, isLowPower } from "@/lib/webgl";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -19,10 +21,25 @@ const NeuralCoreScene = dynamic(() => import("@/components/home/neural-core-scen
   loading: () => null,
 });
 
-/** Mobile gets a lighter cloud. */
+/** Phones and modest machines get a lighter cloud. */
 function particleCount(): number {
   if (typeof window === "undefined") return 2600;
-  return window.matchMedia("(max-width: 767px)").matches ? 1300 : 2600;
+  return isLowPower() ? 1300 : 2600;
+}
+
+/**
+ * Without WebGL: the core as light alone — two soft glows and a slow ring, in
+ * CSS. Still under reduced motion.
+ */
+function NeuralCoreFallback(): ReactElement {
+  return (
+    <div aria-hidden className="absolute inset-0 overflow-hidden">
+      <div className="absolute top-1/2 right-[8%] size-[min(70vw,34rem)] -translate-y-1/2 rounded-full bg-[radial-gradient(circle_at_40%_40%,rgb(0_229_255/35%),rgb(139_92_246/22%)_45%,transparent_70%)] blur-2xl max-[899px]:right-1/2 max-[899px]:translate-x-1/2" />
+      <div className="absolute top-1/2 right-[14%] size-[min(48vw,22rem)] -translate-y-1/2 max-[899px]:right-1/2 max-[899px]:translate-x-1/2">
+        <div className="size-full rounded-full border border-dashed border-[rgb(0_229_255/30%)] shadow-[0_0_60px_rgb(0_229_255/25%),inset_0_0_60px_rgb(139_92_246/20%)] motion-safe:animate-[spin_40s_linear_infinite]" />
+      </div>
+    </div>
+  );
 }
 
 export interface NeuralHeroProps {
@@ -43,6 +60,7 @@ export function NeuralHero({ title, purpose, name, documents, firstUrl }: Neural
   const [count, setCount] = useState(2600);
   const [reducedMotion, setReducedMotion] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [webgl, setWebgl] = useState(true);
   const [active, setActive] = useState(true);
   const [stage, setStage] = useState(0);
 
@@ -52,8 +70,16 @@ export function NeuralHero({ title, purpose, name, documents, firstUrl }: Neural
     setReducedMotion(query.matches);
     const onChange = () => setReducedMotion(query.matches);
     query.addEventListener("change", onChange);
-    setMounted(true);
-    return () => query.removeEventListener("change", onChange);
+    setWebgl(hasWebGL());
+    // The scene (three.js and its shaders) is fetched once the page is idle,
+    // so it never competes with the headline for the first paint.
+    const idle = window.requestIdleCallback?.(() => setMounted(true), { timeout: 900 });
+    const timer = idle === undefined ? window.setTimeout(() => setMounted(true), 200) : undefined;
+    return () => {
+      query.removeEventListener("change", onChange);
+      if (idle !== undefined) window.cancelIdleCallback(idle);
+      if (timer !== undefined) window.clearTimeout(timer);
+    };
   }, []);
 
   // The core leans towards the pointer anywhere on the page.
@@ -138,8 +164,12 @@ export function NeuralHero({ title, purpose, name, documents, firstUrl }: Neural
       <div className="sticky top-14 h-[calc(100svh-3.5rem)] min-h-[34rem] overflow-hidden">
         {/* The scene, behind everything. */}
         <div className="absolute inset-0">
-          {mounted ? (
-            <NeuralCoreScene input={input} count={count} reducedMotion={reducedMotion} active={active} />
+          {!webgl ? (
+            <NeuralCoreFallback />
+          ) : mounted ? (
+            <SceneBoundary fallback={<NeuralCoreFallback />}>
+              <NeuralCoreScene input={input} count={count} reducedMotion={reducedMotion} active={active} />
+            </SceneBoundary>
           ) : null}
         </div>
 

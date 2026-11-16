@@ -1333,3 +1333,115 @@ body:has([data-particle-field]) {
   color: #00e5ff;
   background: rgb(0 229 255 / 9%);
 }
+
+/* ═══ Neural — polish (build.md Phase 7) ═════════════════════════════════════ */
+
+/* The glowing cursor (components/polish/neural-cursor.tsx). The system cursor
+   is hidden only while ours is on screen, and comes back over text fields. */
+html.neural-cursor-visible,
+html.neural-cursor-visible * {
+  cursor: none !important;
+}
+
+html.neural-cursor-visible :is(input, textarea, [contenteditable="true"], [contenteditable=""]) {
+  cursor: text !important;
+}
+
+.neural-cursor-dot,
+.neural-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2147483000;
+  border-radius: 9999px;
+  pointer-events: none;
+  opacity: 0;
+  will-change: transform;
+}
+
+.neural-cursor-dot {
+  width: 6px;
+  height: 6px;
+  background: #00e5ff;
+  box-shadow:
+    0 0 8px #00e5ff,
+    0 0 22px rgb(0 229 255 / 60%);
+  transition:
+    opacity 180ms ease,
+    width 180ms ease,
+    height 180ms ease,
+    background-color 180ms ease;
+}
+
+.neural-cursor-ring {
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgb(0 229 255 / 45%);
+  background: radial-gradient(circle, rgb(0 229 255 / 7%), transparent 70%);
+  box-shadow: 0 0 18px rgb(0 229 255 / 22%);
+  transition:
+    opacity 200ms ease,
+    width 260ms cubic-bezier(0.22, 1, 0.36, 1),
+    height 260ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 200ms ease,
+    background-color 200ms ease,
+    box-shadow 200ms ease;
+}
+
+html.neural-cursor-visible .neural-cursor-dot,
+html.neural-cursor-visible .neural-cursor-ring {
+  opacity: 1;
+}
+
+.neural-cursor-ring[data-state="hover"] {
+  width: 54px;
+  height: 54px;
+  border-color: rgb(139 92 246 / 70%);
+  background: radial-gradient(circle, rgb(139 92 246 / 14%), transparent 72%);
+  box-shadow:
+    0 0 26px rgb(139 92 246 / 35%),
+    inset 0 0 14px rgb(0 229 255 / 18%);
+}
+
+.neural-cursor-dot[data-state="hover"] {
+  width: 4px;
+  height: 4px;
+  background: #ffc857;
+  box-shadow:
+    0 0 8px #ffc857,
+    0 0 18px rgb(255 200 87 / 60%);
+}
+
+html.neural-cursor-visible .neural-cursor-ring[data-state="text"],
+html.neural-cursor-visible .neural-cursor-dot[data-state="text"] {
+  opacity: 0;
+}
+
+.neural-cursor-ring.is-down {
+  width: 26px;
+  height: 26px;
+}
+
+/* Search results: matches glow in the accent. */
+[role="dialog"] mark {
+  background: rgb(0 229 255 / 16%);
+  color: #e6fbff;
+  border-radius: 0.2em;
+  padding-inline: 0.1em;
+}
+
+/* Reduced motion, everywhere: anything still animating by CSS stops, and
+   in-page jumps are instant. The JavaScript animations check the same
+   setting themselves (GSAP matchMedia, Framer's MotionConfig, Lenis). */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

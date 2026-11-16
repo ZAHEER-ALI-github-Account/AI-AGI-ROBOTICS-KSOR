@@ -15,6 +15,9 @@ import { readStageManifest } from "@/lib/stage-manifest";
 import KsorSearchDialog from "@/components/search-dialog";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteNavbar } from "@/components/site-navbar";
+import { MotionProvider } from "@/components/polish/motion-provider";
+import { NeuralCursor } from "@/components/polish/neural-cursor";
+import { SmoothScroll } from "@/components/polish/smooth-scroll";
 
 export const viewport: Viewport = {
   themeColor: "#05060a",
@@ -70,10 +73,17 @@ export default function Layout({ children }: LayoutProps<"/">) {
             options: { api: `${basePath}/api/search` },
           }}
         >
-          {/* Inside the provider: the navbar's search bar opens its dialog. */}
-          <SiteNavbar />
-          <div className="flex flex-1 flex-col">{children}</div>
-          <SiteFooter />
+          <MotionProvider>
+            {/* Inside the provider: the navbar's search bar opens its dialog. */}
+            <SiteNavbar />
+            <div className="flex flex-1 flex-col">{children}</div>
+            <SiteFooter />
+          </MotionProvider>
+          {/* Site-wide polish (build.md Phase 7): Lenis smooth scrolling and,
+              on a desktop pointer, the glowing cursor. Neither renders
+              anything into the page flow. */}
+          <SmoothScroll />
+          <NeuralCursor />
         </RootProvider>
       </body>
     </html>

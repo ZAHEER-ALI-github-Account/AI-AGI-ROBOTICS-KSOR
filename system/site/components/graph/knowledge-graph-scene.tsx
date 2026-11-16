@@ -5,7 +5,11 @@ import { Html, OrbitControls, Stars } from "@react-three/drei";
 import { useEffect, useMemo, useRef, type MutableRefObject, type ReactElement } from "react";
 import * as THREE from "three";
 
+import { installThreeConsole } from "@/lib/three-console";
+
 import type { GraphLink, GraphNode } from "@/lib/knowledge-graph";
+
+installThreeConsole();
 
 /** The parts of drei's OrbitControls the scene drives. */
 interface OrbitControlsImpl {
@@ -32,6 +36,8 @@ interface SceneProps {
   /** Set by the page to fly the camera; the scene clears it on arrival. */
   flight: MutableRefObject<FlightRequest | null>;
   reducedMotion: boolean;
+  /** A phone or a modest machine: fewer stars, a lower pixel ratio. */
+  lowPower?: boolean;
 }
 
 function nodeRadius(node: GraphNode): number {
@@ -289,6 +295,7 @@ export default function KnowledgeGraphScene({
   onSelect,
   flight,
   reducedMotion,
+  lowPower = false,
 }: SceneProps): ReactElement {
   const neighbours = useMemo(() => {
     if (hovered === null) return null;
@@ -309,12 +316,12 @@ export default function KnowledgeGraphScene({
 
   return (
     <Canvas
-      dpr={[1, 1.75]}
+      dpr={lowPower ? [1, 1.25] : [1, 1.75]}
       camera={{ position: [0, 5, 30], fov: 50, near: 0.1, far: 400 }}
       gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
       onPointerMissed={() => onHover(null)}
     >
-      <Stars radius={90} depth={50} count={1800} factor={3} saturation={0} fade speed={reducedMotion ? 0 : 0.6} />
+      <Stars radius={90} depth={50} count={lowPower ? 700 : 1800} factor={3} saturation={0} fade speed={reducedMotion ? 0 : 0.6} />
       <SceneContent
         nodes={nodes}
         links={links}

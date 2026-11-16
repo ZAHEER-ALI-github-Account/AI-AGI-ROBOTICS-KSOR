@@ -4,7 +4,11 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { useEffect, useMemo, useRef, type MutableRefObject, type ReactElement } from "react";
 import * as THREE from "three";
 
+import { installThreeConsole } from "@/lib/three-console";
+
 import { createNeuralShapes, type NeuralShapes } from "@/lib/neural-shapes";
+
+installThreeConsole();
 
 /** What the hero hands the scene: live values it reads every frame. */
 export interface NeuralCoreInput {
