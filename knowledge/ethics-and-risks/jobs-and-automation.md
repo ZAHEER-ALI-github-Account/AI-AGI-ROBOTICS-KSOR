@@ -2,12 +2,15 @@
 type: Document
 title: Jobs and automation
 description: What the evidence says about robots, AI and work — exposure estimates, measured job and wage effects, productivity gains and the disagreement between economists.
-status: draft
+status: stable
 order: 601
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: acemoglu-restrepo
     title: "Acemoglu & Restrepo — Robots and Jobs: Evidence from US Labor Markets, NBER Working Paper 23285"

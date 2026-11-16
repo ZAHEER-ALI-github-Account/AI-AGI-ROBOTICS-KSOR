@@ -2,12 +2,15 @@
 type: Document
 title: Medical and surgical robots
 description: Robot-assisted surgery, rehabilitation robots and the first experiments in autonomous surgery.
-status: draft
+status: stable
 order: 405
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: da-vinci
     title: "Intuitive — da Vinci surgical systems"

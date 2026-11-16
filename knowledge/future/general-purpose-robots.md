@@ -2,12 +2,15 @@
 type: Document
 title: General-purpose robots
 description: The push from single-task machines to robots that can learn many tasks — the data, models and simulation that could get there.
-status: draft
+status: stable
 order: 803
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: fm-survey
     title: "Hu et al. — Toward General-Purpose Robots via Foundation Models: A Survey and Meta-Analysis (2023)"

@@ -2,12 +2,15 @@
 type: Document
 title: Bias in AI systems
 description: How AI systems can treat groups of people unequally, the landmark studies that showed it, and how NIST frames the problem.
-status: draft
+status: stable
 order: 603
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: gender-shades
     title: "Buolamwini & Gebru — Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification (2018)"

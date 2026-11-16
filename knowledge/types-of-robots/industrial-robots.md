@@ -2,12 +2,15 @@
 type: Document
 title: Industrial robots
 description: The programmable arms that build cars and electronics — how many there are, where they work, and the safety standards that govern them.
-status: draft
+status: stable
 order: 401
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: ifr-industrial-2025
     title: "IFR — World Robotics 2025: Global robot demand in factories doubles over 10 years (25 September 2025)"

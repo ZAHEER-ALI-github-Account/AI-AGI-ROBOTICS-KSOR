@@ -2,12 +2,15 @@
 type: Document
 title: AI and robots in agriculture
 description: Automation on farms — from tractors and milking robots to digital tools — and the barriers small farmers face.
-status: draft
+status: stable
 order: 503
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: fao-sofa-2022
     title: "FAO — The State of Food and Agriculture 2022: Leveraging automation in agriculture for transforming agrifood systems (summary via UNCCD library)"

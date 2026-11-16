@@ -2,12 +2,15 @@
 type: Document
 title: What is artificial general intelligence?
 description: How researchers and labs define AGI, how it differs from today's narrow AI, and how progress toward it might be measured.
-status: draft
+status: stable
 order: 701
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: openai-charter
     title: "OpenAI — OpenAI Charter"

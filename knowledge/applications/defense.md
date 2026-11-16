@@ -2,12 +2,15 @@
 type: Document
 title: AI and robots in defense
 description: Why governments treat AI as a matter of national power, how they evaluate AI for security risks, and the international debate over autonomy in weapons.
-status: draft
+status: stable
 order: 506
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: hrw-2024
     title: "Human Rights Watch — Killer Robots: UN Vote Should Spur Treaty Negotiations (5 December 2024)"

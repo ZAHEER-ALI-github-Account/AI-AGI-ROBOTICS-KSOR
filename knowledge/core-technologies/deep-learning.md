@@ -2,12 +2,15 @@
 type: Document
 title: Deep learning
 description: Many-layered neural networks that learn their own representations from raw data — the technology behind modern vision, speech and language AI.
-status: draft
+status: stable
 order: 302
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: lecun-nature
     title: "LeCun, Bengio & Hinton — Deep learning, Nature 521 (2015)"

@@ -2,12 +2,15 @@
 type: Document
 title: Swarm robots
 description: Large groups of simple robots that cooperate through local rules, inspired by ants and bees — including the thousand-robot Kilobot swarm.
-status: draft
+status: stable
 order: 407
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: swarm-review
     title: "Brambilla, Ferrante, Birattari & Dorigo — Swarm robotics: a review from the swarm engineering perspective, Swarm Intelligence 7 (2013)"

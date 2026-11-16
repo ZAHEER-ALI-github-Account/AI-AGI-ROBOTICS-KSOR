@@ -2,12 +2,15 @@
 type: Document
 title: What is artificial intelligence?
 description: How artificial intelligence is defined today, from the 1956 Dartmouth proposal to the OECD and EU definitions used in law.
-status: draft
+status: stable
 order: 101
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: dartmouth
     title: "McCarthy, Minsky, Rochester & Shannon — A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence (1955)"

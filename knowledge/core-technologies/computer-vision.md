@@ -2,12 +2,15 @@
 type: Document
 title: Computer vision
 description: How machines learn to recognise, locate and segment objects in images and video — the eyes of most robots.
-status: draft
+status: stable
 order: 304
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: alexnet
     title: "Krizhevsky, Sutskever & Hinton — ImageNet Classification with Deep Convolutional Neural Networks (2012)"

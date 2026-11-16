@@ -2,12 +2,15 @@
 type: Document
 title: Glossary
 description: Short definitions of the key terms used across this knowledge base, each linked to the article that explains it.
-status: draft
+status: stable
 order: 900
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: oecd-definition
     title: "OECD.AI — Updates to the OECD's definition of an AI system explained (2023)"

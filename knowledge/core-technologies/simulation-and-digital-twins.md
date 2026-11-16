@@ -2,12 +2,15 @@
 type: Document
 title: Simulation and digital twins
 description: Why robots learn in virtual worlds first, how simulation-trained skills transfer to reality, and what a digital twin is.
-status: draft
+status: stable
 order: 309
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: domain-randomization
     title: "Tobin et al. — Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World (2017)"

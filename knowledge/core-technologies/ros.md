@@ -2,12 +2,15 @@
 type: Document
 title: ROS — the Robot Operating System
 description: The open-source software framework that most robotics research and many commercial robots are built on.
-status: draft
+status: stable
 order: 307
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: ros2-paper
     title: "Macenski et al. — Robot Operating System 2: Design, Architecture, and Uses In The Wild, Science Robotics (2022)"

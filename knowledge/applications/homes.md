@@ -2,12 +2,15 @@
 type: Document
 title: AI and robots in the home
 description: Robot vacuums, the first home humanoids, the research behind household robots, and the safety and privacy questions they raise.
-status: draft
+status: stable
 order: 508
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: ifr-service-2025
     title: "IFR — World Robotics 2025: Service robots see global growth boom (7 October 2025)"

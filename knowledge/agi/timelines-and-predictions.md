@@ -2,12 +2,15 @@
 type: Document
 title: Expert timelines and predictions for AGI
 description: When researchers and lab leaders think AGI-level systems might arrive, what trend data shows, and why forecasts differ so widely.
-status: draft
+status: stable
 order: 707
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: grace-survey
     title: "Grace et al. — Thousands of AI Authors on the Future of AI (2024)"

@@ -2,12 +2,15 @@
 type: Document
 title: Reinforcement learning
 description: Learning by trial and error from rewards — how AI mastered games and how robots learn to walk and manipulate.
-status: draft
+status: stable
 order: 303
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: sutton-barto
     title: "Sutton & Barto — Reinforcement Learning: An Introduction, 2nd edition"

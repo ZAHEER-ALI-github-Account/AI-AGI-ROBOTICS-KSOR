@@ -2,12 +2,15 @@
 type: Document
 title: AI and robots in logistics
 description: Warehouse robot fleets, AI that coordinates them, humanoids moving totes and robotaxis on the road.
-status: draft
+status: stable
 order: 504
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: amazon-million
     title: "Amazon — Amazon deploys over 1 million robots and launches new AI foundation model (July 2025)"

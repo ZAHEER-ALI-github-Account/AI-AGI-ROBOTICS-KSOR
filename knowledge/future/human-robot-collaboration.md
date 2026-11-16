@@ -2,12 +2,15 @@
 type: Document
 title: Human–robot collaboration
 description: How people and robots — and people and AI assistants — are learning to work side by side, and the safety rules that make it possible.
-status: draft
+status: stable
 order: 802
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: iso-15066
     title: "ISO/TS 15066:2016 — Robots and robotic devices — Collaborative robots"

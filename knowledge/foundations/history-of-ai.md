@@ -2,12 +2,15 @@
 type: Document
 title: History of artificial intelligence
 description: From Turing's 1950 question and the 1956 Dartmouth project through neural networks, deep learning and large language models.
-status: draft
+status: stable
 order: 103
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: turing
     title: "Turing — Computing Machinery and Intelligence, Mind 59(236) (1950)"

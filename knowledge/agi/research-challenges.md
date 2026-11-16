@@ -2,12 +2,15 @@
 type: Document
 title: Key research challenges on the path to AGI
 description: The open problems researchers say stand between today's AI and general intelligence — generalisation, reasoning, reliability, data, embodiment and measurement.
-status: draft
+status: stable
 order: 705
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: chollet
     title: "Chollet — On the Measure of Intelligence (2019)"

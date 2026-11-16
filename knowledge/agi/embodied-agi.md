@@ -2,12 +2,15 @@
 type: Document
 title: Embodied AGI and robotics
 description: Why many researchers think general intelligence needs a body, and how robot foundation models connect AGI research to robotics.
-status: draft
+status: stable
 order: 702
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: brooks-1991
     title: "Brooks — Intelligence without representation, Artificial Intelligence 47 (1991)"

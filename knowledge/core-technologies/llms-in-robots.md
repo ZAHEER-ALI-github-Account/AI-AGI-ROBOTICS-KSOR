@@ -2,12 +2,15 @@
 type: Document
 title: Large language models in robots
 description: How language and vision-language models became robot "brains" — from SayCan and PaLM-E to vision-language-action models like RT-2, π0, Gemini Robotics and GR00T.
-status: draft
+status: stable
 order: 308
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: saycan
     title: "Ahn et al. — Do As I Can, Not As I Say: Grounding Language in Robotic Affordances (2022)"

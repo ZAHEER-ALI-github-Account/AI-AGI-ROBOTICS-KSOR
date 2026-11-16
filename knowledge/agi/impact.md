@@ -2,12 +2,15 @@
 type: Document
 title: Possible impact of AGI on jobs, economy, science and society
 description: What advanced AI could mean for work, growth, scientific discovery and society — the optimistic and cautious cases, each with its evidence.
-status: draft
+status: stable
 order: 708
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: amodei-mlg
     title: "Amodei — Machines of Loving Grace: How AI Could Transform the World for the Better (2024)"

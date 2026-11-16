@@ -2,12 +2,15 @@
 type: Document
 title: AI and robots in healthcare
 description: Medical imaging, protein structure prediction, surgical robots and the evidence and ethics behind AI in health.
-status: draft
+status: stable
 order: 502
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: masai
     title: "Lång et al. — AI-supported screen reading versus standard double reading in the MASAI trial, Lancet Oncology (2023)"

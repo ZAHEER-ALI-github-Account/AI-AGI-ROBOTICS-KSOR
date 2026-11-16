@@ -2,12 +2,15 @@
 type: Document
 title: SLAM — simultaneous localization and mapping
 description: How a robot builds a map of an unknown place while working out where it is inside that map.
-status: draft
+status: stable
 order: 306
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: slam-survey
     title: "Cadena et al. — Past, Present, and Future of Simultaneous Localization and Mapping: Towards the Robust-Perception Age (2016)"

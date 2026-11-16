@@ -2,12 +2,15 @@
 type: Document
 title: "Action and control: how robots move"
 description: Actuators, kinematics, feedback control and learned controllers — the "act" step that makes decisions physical.
-status: draft
+status: stable
 order: 204
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: modern-robotics
     title: "Lynch & Park — Modern Robotics: Mechanics, Planning, and Control (2017)"

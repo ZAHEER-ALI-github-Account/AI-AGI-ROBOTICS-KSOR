@@ -2,12 +2,15 @@
 type: Document
 title: AI and robots in education
 description: AI tutors, the evidence on whether they help students learn, and international guidance for schools.
-status: draft
+status: stable
 order: 507
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: kestin
     title: "Kestin et al. — AI tutoring outperforms in-class active learning: an RCT introducing a novel research-based design in an authentic educational setting, Scientific Reports (2025)"

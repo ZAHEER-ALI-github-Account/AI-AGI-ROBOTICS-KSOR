@@ -2,12 +2,15 @@
 type: Document
 title: The sense–think–act loop
 description: How every robot turns sensing into decisions and decisions into motion, and where AI fits in each step.
-status: draft
+status: stable
 order: 201
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: aima
     title: "Russell & Norvig — Artificial Intelligence: A Modern Approach, 4th edition"

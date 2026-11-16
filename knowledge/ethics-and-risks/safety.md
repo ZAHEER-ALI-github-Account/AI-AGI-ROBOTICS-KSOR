@@ -2,12 +2,15 @@
 type: Document
 title: Safety of AI and robots
 description: Physical safety around robots, accidents in machine learning systems, and how standards and investigations try to prevent harm.
-status: draft
+status: stable
 order: 602
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: concrete-problems
     title: "Amodei et al. — Concrete Problems in AI Safety (2016)"

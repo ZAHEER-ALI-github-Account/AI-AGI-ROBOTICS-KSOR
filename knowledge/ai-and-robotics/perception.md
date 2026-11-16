@@ -2,12 +2,15 @@
 type: Document
 title: "Perception: how robots sense the world"
 description: The sensors robots use and how AI turns raw camera, depth and position data into an understanding of the scene.
-status: draft
+status: stable
 order: 202
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: springer-handbook
     title: "Siciliano & Khatib (eds.) — Springer Handbook of Robotics, 2nd edition"

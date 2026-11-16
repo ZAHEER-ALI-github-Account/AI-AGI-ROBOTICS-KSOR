@@ -2,12 +2,15 @@
 type: Document
 title: References
 description: The master list of every source cited in this knowledge base, grouped by section.
-status: draft
+status: stable
 order: 1000
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ---
 
 **In short:** every source cited anywhere in this record, grouped by the section

@@ -2,12 +2,15 @@
 type: Document
 title: "Humanoid robots: the road ahead"
 description: Production plans, market forecasts and the open problems that will decide whether humanoids become everyday machines.
-status: draft
+status: stable
 order: 801
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: hyundai-ces-2026
     title: "Hyundai Motor Group — Hyundai Motor Group marks CES 2026 with major AI robotics announcements and accolades"

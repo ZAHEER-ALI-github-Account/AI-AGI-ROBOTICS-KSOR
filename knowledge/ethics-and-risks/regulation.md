@@ -2,12 +2,15 @@
 type: Document
 title: Regulation of AI and robots
 description: The main laws, frameworks and international agreements governing AI — the EU AI Act, US policy, China's rules, and global principles.
-status: draft
+status: stable
 order: 606
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: eu-ai-act
     title: "Regulation (EU) 2024/1689 — the Artificial Intelligence Act (EUR-Lex)"

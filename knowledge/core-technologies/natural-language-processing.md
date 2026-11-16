@@ -2,12 +2,15 @@
 type: Document
 title: Natural language processing and large language models
 description: How computers learned to work with human language — from word vectors to Transformers, GPT-style models and instruction tuning.
-status: draft
+status: stable
 order: 305
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: word2vec
     title: "Mikolov et al. — Efficient Estimation of Word Representations in Vector Space (2013)"

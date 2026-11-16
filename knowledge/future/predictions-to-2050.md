@@ -2,12 +2,15 @@
 type: Document
 title: Predictions to 2050
 description: A dated collection of published forecasts about AI, AGI and robots up to 2050 — each attributed to its source, none endorsed by this record.
-status: draft
+status: stable
 order: 804
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: ifr-industrial-2025
     title: "IFR — World Robotics 2025: Global robot demand in factories doubles over 10 years (25 September 2025)"

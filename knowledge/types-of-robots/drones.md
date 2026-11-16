@@ -2,12 +2,15 @@
 type: Document
 title: Drones and aerial robots
 description: Uncrewed aircraft that fly with increasing autonomy — from delivery drones to the first helicopter on Mars — and the rules that govern them.
-status: draft
+status: stable
 order: 404
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: faa-part107
     title: "US Federal Aviation Administration — Certificated Remote Pilots including Commercial Operators (Part 107)"

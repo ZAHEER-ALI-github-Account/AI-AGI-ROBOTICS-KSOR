@@ -2,12 +2,15 @@
 type: Document
 title: Autonomous vehicles
 description: Self-driving cars and robotaxis — the levels of automation, how they perceive and decide, and what the safety data shows.
-status: draft
+status: stable
 order: 403
 generated: { by: "claude-code/opus-5-5", at: 2026-11-01T12:00:00Z }
+verified:
+  - { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 ksor:
   audience: [public]
   owner: human:zaheerali
+  approval: { by: "human:zaheerali", at: 2026-11-16T08:08:00Z }
 sources:
   - id: sae-levels
     title: "SAE Automotive Engineering — J3016 Automated-Driving Graphic Update (2019)"
