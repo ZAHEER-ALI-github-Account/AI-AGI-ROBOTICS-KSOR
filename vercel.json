@@ -1,12 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "services": {
-    "site": {
-      "root": ".",
-      "installCommand": "pnpm install --no-frozen-lockfile",
-      "buildCommand": "pnpm build",
-      "outputDirectory": "system/site/out"
-    }
-  },
-  "rewrites": [{ "source": "/(.*)", "destination": { "service": "site" } }]
+  "framework": null,
+  "installCommand": "pnpm install --no-frozen-lockfile",
+  "buildCommand": "pnpm build",
+  "outputDirectory": "system/site/out"
 }
