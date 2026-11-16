@@ -35,6 +35,12 @@ import { Slides } from "@/components/slides";
 import { StudyAids } from "@/components/study-aids";
 import { deckFor, quizFor, slidesFor, summaryFor } from "@/lib/attachments";
 import { readingMinutes } from "@/lib/reading-time";
+import { relatedTopics } from "@/lib/related";
+import { ReadingProgress } from "@/components/article/reading-progress";
+import { ProseReveal } from "@/components/article/prose-reveal";
+import { RelatedTopics } from "@/components/article/related-topics";
+import { FadeIn } from "@/components/article/fade-in";
+import type { TOCItemType } from "fumadocs-core/toc";
 
 /** The route a slug names: `/docs`, or `/docs/a/b`. */
 function routeOf(slug: readonly string[] | undefined): string {
@@ -135,11 +141,27 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
     label: allPages.find((candidate) => candidate.url === url)?.data.title ?? url,
   }));
 
+  // The document's own "Related topics" list, as cards (lib/related.ts). When
+  // there are cards they stand in for the list on this page, so the rail
+  // points at them; Sources gets a rail entry of its own.
+  const related = relatedTopics(page.path);
+  const sources = showGovernance ? governance.sources : [];
+  const toc: TOCItemType[] = [
+    ...page.data.toc.map((item) =>
+      related.length > 0 && item.url === "#related-topics" ? { ...item, url: "#related" } : item,
+    ),
+    ...(sources.length > 0 ? [{ title: "Sources", url: "#sources", depth: 2 }] : []),
+  ];
+
   return (
-    <TocItems items={page.data.toc}>
+    <TocItems items={toc}>
+      <ReadingProgress />
+      <ProseReveal />
       <DocsPage
-        toc={page.data.toc}
+        toc={toc}
         full={page.data.full}
+        className="neural-article"
+        {...(related.length > 0 ? { "data-related-cards": "" } : {})}
         // The rail is ours; the provider and the small-screen popover stay the
         // shell's (its own rail ran two to four headings ahead of the reader on
         // this record's short-sectioned documents). The breadcrumb is ours
@@ -214,7 +236,12 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
           {deck === null ? null : <Flashcards deck={deck} />}
           {quiz === null ? null : <Quiz quiz={quiz} />}
         </StudyAids>
-        {showGovernance ? <Provenance entries={governance.sources} /> : null}
+        <RelatedTopics topics={related} />
+        {sources.length > 0 ? (
+          <FadeIn>
+            <Provenance entries={sources} />
+          </FadeIn>
+        ) : null}
       </DocsPage>
     </TocItems>
   );

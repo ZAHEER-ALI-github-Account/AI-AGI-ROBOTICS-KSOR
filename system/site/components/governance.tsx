@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { DocumentActions } from "@/components/document-actions";
-import { Clock } from "lucide-react";
+import { BookOpen, Clock, ExternalLink } from "lucide-react";
 import type { ReactElement } from "react";
 
 import { displayActor } from "@/lib/actor-display";
@@ -370,45 +370,84 @@ export function Provenance({
   if (entries.length === 0) return null;
 
   return (
-    <section className="mt-10 border-t border-fd-border pt-5 text-sm">
-      <h2 className="ksor-section-label mb-2">Sources</h2>
+    <section
+      id="sources"
+      aria-labelledby="sources-heading"
+      className="not-prose glass mt-12 scroll-mt-24 rounded-2xl p-5 text-sm md:p-6"
+    >
+      <div className="mb-4 flex items-center gap-3">
+        <span className="grid size-8 place-items-center rounded-lg border border-[var(--neural-glass-border)] bg-[rgb(0_229_255/8%)] text-neural-cyan">
+          <BookOpen aria-hidden className="size-4" />
+        </span>
+        <h2 id="sources-heading" className="font-display text-lg font-semibold tracking-[-0.01em]">
+          Sources
+        </h2>
+        <span className="ms-auto font-mono text-[10px] tracking-[0.16em] text-fd-muted-foreground uppercase">
+          {entries.length} cited
+        </span>
+      </div>
       {/* break-words, because a source is often a long unbroken URL: on a
           phone it overflowed its row by 175px under an ancestor with
           `overflow-x: clip`, so the middle of the source was clipped away with
           no ellipsis and nothing to scroll (measured, 2026-08-20). A source
           nobody can read is not provenance. */}
-      <ul className="space-y-1 break-words text-fd-muted-foreground">
+      <ol className="grid gap-2 break-words">
         {entries.map((entry, index) => {
           // A resource that IS a URL becomes followable; a bundle path or a
           // scope descriptor stays text. `rel="noreferrer"` because the
           // destination is authored in the record, not chosen by this site.
           const href = sourceHref(entry.resource);
           const label = entry.title ?? entry.resource;
+          let host: string | null = null;
+          if (href !== null) {
+            try {
+              host = new URL(href).hostname.replace(/^www\./, "");
+            } catch {
+              host = null;
+            }
+          }
+          const body = (
+            <>
+              <span className="font-mono text-[11px] text-neural-cyan/80 tabular-nums">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <span className="min-w-0 flex-1">
+                <span className="block leading-snug text-fd-foreground">{label}</span>
+                <span className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[10.5px] text-fd-muted-foreground">
+                  {entry.id === null ? null : <span>[^{entry.id}]</span>}
+                  {host === null ? null : <span className="text-neural-violet">{host}</span>}
+                </span>
+              </span>
+              {href === null ? null : (
+                <ExternalLink
+                  aria-hidden
+                  className="mt-0.5 size-3.5 shrink-0 text-fd-muted-foreground transition-colors group-hover:text-neural-cyan"
+                />
+              )}
+            </>
+          );
+          const row =
+            "flex items-start gap-3 rounded-xl border border-white/5 bg-white/[0.02] px-3.5 py-3";
           return (
             // Position, not text: a record may cite the same source twice, and
             // duplicate keys are a console error on a governed page.
             <li key={`${index}-${entry.resource}`}>
-              {entry.id === null ? null : (
-                <span className="me-2 font-mono text-xs text-fd-muted-foreground">
-                  [^{entry.id}]
-                </span>
-              )}
               {href === null ? (
-                label
+                <div className={row}>{body}</div>
               ) : (
                 <a
                   href={href}
                   target="_blank"
                   rel="noreferrer"
-                  className="underline underline-offset-4 transition-colors hover:text-fd-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fd-ring"
+                  className={`group ${row} transition-colors hover:border-[var(--neural-glass-border-hover)] hover:bg-[rgb(0_229_255/4%)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fd-ring motion-reduce:transition-none`}
                 >
-                  {label}
+                  {body}
                 </a>
               )}
             </li>
           );
         })}
-      </ul>
+      </ol>
     </section>
   );
 }

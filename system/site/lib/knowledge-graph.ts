@@ -1,9 +1,7 @@
-import path from "node:path";
-
-import { conceptRoute, dirOfRoute } from "./index-routes";
+import { dirOfRoute } from "./index-routes";
+import { relatedRoutes } from "./related";
 import { sectionTone, type SectionTone } from "./section-tone";
 import { entriesUnder, getSortedPages } from "./source";
-import { stagedBody } from "./stage-manifest";
 
 /**
  * The record as a graph, for the 3D knowledge graph page.
@@ -79,26 +77,6 @@ function seeded(seed: number): () => number {
     t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
     return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
   };
-}
-
-/** The "Related topics" section's relative `.md` links, resolved to routes. */
-function relatedRoutes(pagePath: string): string[] {
-  const body = stagedBody(pagePath);
-  const start = /^##\s+Related topics\s*$/im.exec(body);
-  if (start === null) return [];
-  const rest = body.slice(start.index + start[0].length);
-  const end = /^##\s/m.exec(rest);
-  const block = end === null ? rest : rest.slice(0, end.index);
-
-  const routes: string[] = [];
-  for (const match of block.matchAll(/\[[^\]]*\]\(\s*([^)\s]+)(?:\s+"[^"]*")?\s*\)/g)) {
-    const href = decodeURI(match[1].split("#")[0] ?? "");
-    if (!href.endsWith(".md") || /^[a-z]+:/i.test(href)) continue;
-    const resolved = path.posix.normalize(path.posix.join(path.posix.dirname(pagePath), href));
-    if (resolved.startsWith("..") || resolved.endsWith("index.md")) continue;
-    routes.push(conceptRoute(resolved));
-  }
-  return routes;
 }
 
 type Vec = [number, number, number];

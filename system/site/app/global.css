@@ -1236,3 +1236,100 @@ h4 {
 #nd-page .prose a:not([data-card]):hover {
   text-decoration-color: #00e5ff;
 }
+
+/* ═══ Neural — article pages (build.md Phase 6) ══════════════════════════════
+   A document reads inside one glass card. The card is the shell's own
+   `#nd-page` article, marked `neural-article` by the page, so folder listings
+   keep their open layout. */
+body:has([data-particle-field]) {
+  /* Makes the body a stacking context, so the fixed particle canvas (z -10)
+     and the grid paint ABOVE the body's own background, not under it. */
+  isolation: isolate;
+}
+
+#nd-page.neural-article {
+  position: relative;
+  margin-block: 1.5rem 3rem;
+  border-radius: 1.5rem;
+  background-image: linear-gradient(165deg, rgb(255 255 255 / 5%), rgb(255 255 255 / 1.2%) 40%);
+  background-color: rgb(9 12 22 / 58%);
+  border: 1px solid var(--neural-glass-border);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 6%),
+    0 30px 80px -40px rgb(0 0 0 / 80%),
+    var(--neural-glow);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+}
+
+@media (min-width: 768px) {
+  #nd-page.neural-article:not([data-full="true"]) {
+    padding-inline: 2.5rem;
+    padding-bottom: 2.75rem;
+  }
+}
+
+@media (max-width: 767px) {
+  #nd-page.neural-article {
+    margin-inline: 0.5rem;
+    width: calc(100% - 1rem);
+    border-radius: 1.125rem;
+  }
+}
+
+/* The neon edge along the card's top. */
+#nd-page.neural-article::before {
+  content: "";
+  position: absolute;
+  inset-inline: 10%;
+  top: -1px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgb(0 229 255 / 70%), rgb(139 92 246 / 70%), transparent);
+  pointer-events: none;
+}
+
+/* Cards replace the document's plain "Related topics" list on the page. The
+   list stays in the record, its markdown twin and llms.txt; only this page
+   shows it as cards instead of twice. */
+#nd-page[data-related-cards] .prose h2#related-topics,
+#nd-page[data-related-cards] .prose h2#related-topics + ul {
+  display: none;
+}
+
+/* The table of contents as a glass panel. */
+#nd-toc nav[aria-label="On this page"] {
+  border-radius: 1rem;
+  padding: 0.75rem 0.5rem 0.75rem 0;
+  background-color: rgb(9 12 22 / 45%);
+  border: 1px solid var(--neural-glass-border);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+#nd-toc nav[aria-label="On this page"] a {
+  margin-inline-start: -1px;
+}
+
+#nd-toc nav[aria-label="On this page"] a[aria-current="location"] {
+  background: linear-gradient(90deg, rgb(0 229 255 / 9%), transparent 80%);
+  text-shadow: 0 0 14px rgb(0 229 255 / 45%);
+}
+
+/* GFM footnotes: the short citations under the body, quieter than the prose
+   and pointing the eye on to the full Sources panel below. */
+#nd-page .prose section[data-footnotes] {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px dashed rgb(140 170 255 / 16%);
+  font-size: 0.8125rem;
+  color: var(--color-fd-muted-foreground);
+}
+
+#nd-page .prose a[data-footnote-ref] {
+  padding-inline: 0.2em;
+  border-radius: 0.3em;
+  font-family: var(--font-mono);
+  text-decoration: none;
+  color: #00e5ff;
+  background: rgb(0 229 255 / 9%);
+}
