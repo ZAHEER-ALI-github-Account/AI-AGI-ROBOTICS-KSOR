@@ -32,3 +32,8 @@ system/site/public/sims/
 !.env.example
 
 .DS_Store
+
+# local backup archives of the project — never committed
+*.rar
+*.zip
+*.7z
